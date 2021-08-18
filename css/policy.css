@@ -38,7 +38,7 @@ html, body {
   background: none;
 }
 .wrapper .section_container {
-  padding-right: 110px;
+  padding-right: 10%;
 }
 .wrapper .policy__header {
   font-family: Roboto-Regular, sans-serif;
@@ -48,7 +48,7 @@ html, body {
   line-height: 1.1em;
   letter-spacing: 0;
   color: #323260;
-  margin: 200px 0 46px 111px;
+  margin: 18% 0 4% 10%;
 }
 .wrapper .policy__h2 {
   font-family: Roboto-Regular, sans-serif;
@@ -58,7 +58,7 @@ html, body {
   line-height: 1.5em;
   letter-spacing: 0;
   color: #323260;
-  margin: 38px 0 22px 111px;
+  margin: 4% 0 2% 10%;
 }
 .wrapper .policy__text {
   font-family: Roboto-Regular, sans-serif;
@@ -68,11 +68,33 @@ html, body {
   line-height: 1.3em;
   letter-spacing: 0;
   color: #1F242F;
-  margin-left: 212px;
+  margin-left: 19%;
 }
 .wrapper .policy_link {
   text-decoration: none;
   color: #3E81FB;
+}
+@media screen and (max-width: 900px) {
+  .wrapper .section_container {
+    padding: 0 5%;
+  }
+  .wrapper .policy__header {
+    margin: 10% 0 4% 0;
+  }
+  .wrapper .policy__h2 {
+    margin: 4% 0 2% 5%;
+  }
+  .wrapper .policy__text {
+    margin-left: 9%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .wrapper .policy__header {
+    font-size: 28px;
+  }
+  .wrapper .policy__h2 {
+    font-size: 20px;
+  }
 }
 .wrapper .footer {
   background-color: #326034;

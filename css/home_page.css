@@ -82,7 +82,26 @@ html, body {
 }
 @media screen and (max-width: 1100px) {
   .wrapper .header__container {
-    padding: 0 2%;
+    padding: 0 4%;
+  }
+  .wrapper .header__text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .wrapper .header__container {
+    justify-content: space-around;
+  }
+  .wrapper .header__container .header__h1 {
+    font-size: 20px;
+  }
+  .wrapper .header__container .header__nav {
+    background: none;
+    padding: 0;
+    width: unset;
+  }
+  .wrapper .header__container .header__text {
+    display: none;
   }
 }
 .wrapper .section_1 {
@@ -107,9 +126,9 @@ html, body {
     justify-content: center;
   }
   .wrapper .section_1 .section_1__info .text {
-    margin: 20px 0 30px;
+    margin: 20px auto 30px auto;
     text-align: center;
-    width: 100%;
+    width: 95%;
   }
 }
 .wrapper .section_1 .section_1__info .section_1__order_button {
@@ -218,9 +237,11 @@ html, body {
   left: 1000px;
 }
 .wrapper .section_1 .section_1__buttons {
+  display: flex;
+  justify-content: center;
   width: 475px;
   text-align: center;
-  margin: 20px auto 0;
+  margin-top: 20px;
 }
 .wrapper .section_1 .section_1__buttons .section_1__prev_btn, .wrapper .section_1 .section_1__buttons .section_1__next_btn {
   background: none;
@@ -243,6 +264,7 @@ html, body {
   align-items: center;
   background-color: #FD7900;
   border-radius: 12px;
+  padding: 0 3%;
   margin: 93px auto 36px;
   height: 147px;
   max-width: 1140px;
@@ -302,6 +324,16 @@ html, body {
   }
   .wrapper .banner .banner__size, .wrapper .banner .banner__price {
     margin: 0;
+  }
+  .wrapper .banner .banner__price_header {
+    font-size: 20px;
+  }
+  .wrapper .banner .banner__size_text {
+    font-size: 14px;
+    width: 95%;
+  }
+  .wrapper .banner .banner__price_text {
+    font-size: 14px;
   }
 }
 .wrapper .size_select {
@@ -541,8 +573,7 @@ html, body {
   display: flex;
   align-items: center;
   background-color: #FD7900;
-  padding: 0 30px;
-  height: 189px;
+  padding: 5% 3%;
   color: #ffffff;
   max-width: 1200px;
   width: 100%;
@@ -583,7 +614,6 @@ html, body {
   .footer {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 2%;
   }
 
   .footer_ul, .footer_ul_middle, .footer__contact_info {

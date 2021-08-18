@@ -110,21 +110,14 @@ html, body {
 .wrapper .order_constructor .order_constructor__sample .order_construction__background_image .order_construction__user_text .user_text-lower {
   margin-top: 3.5em;
 }
-@media screen and (max-width: 1000px) {
-  .wrapper .order_constructor .order_constructor__sample .order_construction__background_image, .wrapper .order_constructor .order_constructor__sample .did_not_work {
-    margin-left: 2%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .wrapper .order_constructor .order_constructor__main {
-    margin-left: 5%;
-    margin-right: 2%;
-  }
-}
 @media screen and (max-width: 940px) {
   .wrapper .order_constructor {
     flex-direction: column;
     align-items: center;
+    padding: 0 4%;
+  }
+  .wrapper .order_constructor .order_constructor__sample .order_constructor__image .order_construction__background_image {
+    margin: 0 0 30px 0;
   }
   .wrapper .order_constructor .order_constructor__main .checkout {
     margin: 30px 0;
@@ -133,8 +126,7 @@ html, body {
 .wrapper .did_not_work {
   background-color: #EBEBEB;
   border-radius: 10px;
-  padding: 23px 23px 0 23px;
-  height: 189px;
+  padding: 23px;
   margin: 0 0 30px 60px;
   max-width: 444px;
   width: 100%;
@@ -176,6 +168,11 @@ html, body {
   border: none;
   height: 50px;
   width: 50px;
+}
+@media screen and (max-width: 950px) {
+  .wrapper .did_not_work {
+    margin: 0;
+  }
 }
 .wrapper .order_preview__price {
   font-family: Roboto-Regular, sans-serif;
@@ -277,12 +274,13 @@ html, body {
 .wrapper .order_constructor__main .checkbox {
   background-image: url("../img/button_disablet.svg");
   background-repeat: no-repeat;
-  left: 100%;
-  margin-top: -10px;
+  background-size: contain;
+  left: 106%;
+  margin-top: 0px;
   position: absolute;
   transition: all 0.5s ease;
-  height: 57px;
-  width: 100px;
+  height: 40px;
+  width: 71px;
 }
 .wrapper .order_constructor__main .checkbox_to_hide:checked + .checkbox {
   background-image: url("../img/button_enabled.svg");
@@ -354,6 +352,28 @@ html, body {
 }
 .wrapper .order_constructor__main .error {
   color: red;
+}
+@media screen and (max-width: 650px) {
+  .wrapper .order_constructor__main {
+    margin: 0;
+  }
+  .wrapper .order_constructor__main .label_text {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 490px) {
+  .wrapper aside {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .wrapper .order_constructor__main .label_text {
+    font-size: 16px;
+  }
+  .wrapper .order_constructor__main .order_constructor__form .order_constructor__file_miniature {
+    height: 200px;
+    width: 200px;
+  }
 }
 .wrapper .form_to_email_container {
   /*display: flex;

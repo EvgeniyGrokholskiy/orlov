@@ -59,30 +59,58 @@ html, body {
   }
 
   .section_container {
-    padding-right: 110px;
+    padding-right: 10%;
   }
 
   .policy__header {
     @include font(42px, 1.1em);
     color: $text_color;
-    margin: 200px 0 46px 111px;
+    margin: 18% 0 4% 10%;
   }
 
   .policy__h2 {
     @include font(24px, 1.5em);
     color: $text_color;
-    margin: 38px 0 22px 111px;
+    margin: 4% 0 2% 10%;
   }
 
   .policy__text {
     @include font(16px, 1.3em);
     color: $policy_text;
-    margin-left: 212px;
+    margin-left: 19%;
   }
 
   .policy_link {
     text-decoration: none;
     color: $light_blue;
+  }
+
+  @media screen and (max-width: 900px) {
+    .section_container {
+      padding: 0 5%;
+    }
+
+    .policy__header {
+      margin: 10% 0 4% 0
+    }
+
+    .policy__h2 {
+      margin: 4% 0 2% 5%;
+    }
+
+    .policy__text {
+      margin-left: 9%;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .policy__header {
+      font-size: 28px;
+    }
+
+    .policy__h2 {
+      font-size: 20px;
+    }
   }
 
   .footer {
