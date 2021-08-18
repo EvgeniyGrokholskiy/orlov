@@ -1,0 +1,217 @@
+;
+
+
+let uploadFile;
+let imgTest = document.getElementById('upload_file_miniature_img')
+let imgInCover = document.getElementById('user_image');
+
+//let userImgBackground = document.querySelector('.order_construction__user_img');
+
+let file;
+
+function readFile(input) {
+
+    file = input.files[0];
+
+    let reader = new FileReader();
+
+    reader.readAsBinaryString(file);
+
+    uploadFile = URL.createObjectURL(file);
+
+    imgTest.src = uploadFile;
+    imgInCover.src = uploadFile;
+    //userImgBackground.setAttribute('style',`background-image: url("${uploadFile}");`);
+
+}
+
+
+let userTrackNameSpan = document.getElementById('track_name_span');
+let userTrackNameInput = document.getElementById('track_name');
+let userPerformerNameSpan = document.getElementById('performer_name_span');
+let userPerformerNameInput = document.getElementById('performer_name');
+let userLowerTextSpan = document.getElementById('lower_text_span');
+let userLowerTextInput = document.getElementById('addition_text_input');
+let checkbox = document.getElementById('addition_text');
+checkbox.onclick = onOffLowerText;
+
+function onOffLowerText() {
+    if (checkbox.checked) {
+        userLowerTextInput.attributes.removeNamedItem('disabled');
+    } else {
+        userLowerTextInput.setAttribute('disabled', '');
+        userLowerTextInput.value = '';
+        userLowerTextSpan.innerText = '';
+    }
+}
+
+userTrackNameInput.oninput = changeText;
+userPerformerNameInput.oninput = changeText;
+userLowerTextInput.oninput = changeText;
+
+
+function changeText() {
+
+    if (userTrackNameInput.value === '') {
+        userTrackNameSpan.innerText = 'Название трека';
+    } else {
+        userTrackNameSpan.innerText = userTrackNameInput.value;
+    }
+    if (userPerformerNameInput.value === '') {
+        userPerformerNameSpan.innerText = 'Исполнитель';
+    } else {
+        userPerformerNameSpan.innerText = userPerformerNameInput.value;
+    }
+    userLowerTextSpan.innerText = userLowerTextInput.value;
+}
+
+function increaseImg() {
+    magnificationRatio += 5;
+    uploadedFileMiniature.style.height = `${magnificationRatio}%`;
+    imgInCover.style.height = `${magnificationRatio}%`;
+}
+
+function reductionImg() {
+    magnificationRatio -= 5;
+    uploadedFileMiniature.style.height = `${magnificationRatio}%`;
+    imgInCover.style.height = `${magnificationRatio}%`;
+}
+
+let uploadedFileMiniature = document.getElementById('upload_file_miniature_img');
+let buttonIncrease = document.getElementById('increase');
+let buttonReduction = document.getElementById('reduction');
+let magnificationRatio = 100;
+
+buttonIncrease.onclick = increaseImg;
+buttonReduction.onclick = reductionImg;
+
+function addListenerToMoveButtons() {
+    let buttons = document.querySelectorAll('.move_button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', moveImg);
+    }
+}
+
+let positionTop = 0;
+let positionLeft = 0;
+
+function moveImg(event) {
+
+    let button = event.target;
+
+    if (button.id === 'right') {
+        positionLeft += 5;
+    } else if (button.id === 'left') {
+        positionLeft -= 5;
+    } else if (button.id === 'up') {
+        positionTop -= 5;
+    } else if (button.id === 'down') {
+        positionTop += 5;
+    }
+
+    uploadedFileMiniature.style.top = `${positionTop}px`;
+    uploadedFileMiniature.style.left = `${positionLeft}px`
+    imgInCover.style.top = `${positionTop}px`;
+    imgInCover.style.left = `${positionLeft}px`;
+}
+
+addListenerToMoveButtons();
+
+//---------------------------------------------------price change------------------------
+
+function listenerToInputOption() {
+    for (let i = 0; i < optionInputs.length; i++) {
+        optionInputs[i].onchange = priceChange;
+    }
+}
+
+function priceChange() {
+    let showPrice = document.querySelector('.price__js');
+    optionPrice = 0
+
+    for (let i = 0; i < optionInputs.length; i++) {
+        if (optionInputs[i].checked) {
+            optionPriceArray[i] = optionInputs[i].dataset.price;
+        } else {
+            optionPriceArray[i] = '0';
+        }
+    }
+    if (size === 'small') {
+        price = 990;
+    } else if (size === 'medium') {
+        price = 1490;
+    } else if (size === 'large') {
+        price = 3990;
+    } else if (size === 'trinket') {
+        price = 490;
+    }
+
+    for (let i = 0; i < optionPriceArray.length; i++) {
+        optionPrice += +optionPriceArray[i];
+    }
+    showPrice.innerHTML = +price + +optionPrice;
+    priceToEmail = +price + +optionPrice;
+}
+
+let size = sessionStorage.getItem('size'); //data from home-page
+
+let cover = sessionStorage.getItem('cover'); //data from home-page
+
+
+let optionInputs = document.querySelectorAll('.checkbox_to_hide');
+let optionPriceArray = [];
+let optionPrice = 0;
+let price = 0;
+let priceToEmail;
+
+priceChange();
+listenerToInputOption();
+
+//------------------------------------------------------------------------------------------
+
+function prepareToSendForm(e) {
+
+    let sendToEmail = document.querySelector('.form_to_email_container');
+    let labelForTrackName = document.getElementById('input_for_track_name');
+    let labelForPerformerName = document.getElementById('input_for_performer_name');
+    let button = document.getElementById('link');
+    let price = document.getElementById('price');
+    let sizeOfGlass = document.getElementById('size_of_glass');
+    let playerCover = document.getElementById('cover');
+
+
+    if (userTrackNameInput.value !== '' && userPerformerNameInput.value !== '') {
+        e.preventDefault()
+        labelForTrackName.classList.remove('error');
+        labelForTrackName.innerHTML = 'Название трека';
+        labelForPerformerName.classList.remove('error');
+        labelForPerformerName.innerHTML = 'Исполнитель';
+        document.getElementById('link').setAttribute('href', '')
+        price.value = priceToEmail;
+        sizeOfGlass.value = size;
+        playerCover.value = cover;
+        sendToEmail.classList.remove('hidden');
+        console.log(price.value, sizeOfGlass.value, playerCover.value);
+    } else if (userTrackNameInput.value === '') {
+        labelForTrackName.classList.add('error');
+        labelForTrackName.innerHTML = 'Ведите название трека';
+        button.setAttribute('href', '#h123');
+    } else if (userPerformerNameInput.value === '') {
+        labelForTrackName.classList.remove('error');
+        labelForTrackName.innerHTML = 'Название трека';
+        labelForPerformerName.classList.add('error');
+        labelForPerformerName.innerHTML = 'Укажите имя исполнителя';
+        button.setAttribute('href', '#h123');
+    }
+}
+
+function closeForm() {
+    let sendToEmail = document.querySelector('.form_to_email_container');
+    sendToEmail.classList.add('hidden');
+}
+
+let close = document.getElementById('close');
+close.addEventListener('click', closeForm);
+
+let formSubmit = document.getElementById('button');
+formSubmit.addEventListener('click', prepareToSendForm);

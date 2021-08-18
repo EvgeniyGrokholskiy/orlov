@@ -1,0 +1,188 @@
+$black_text: #000000;
+$button_enabled: black;
+$button_disabled: gray;
+$dark_green: #326034;
+$gray: #EBEBEB;
+$light_blue: #3E81FB;
+$orange: #FD7900;
+$price_color: #6A6E7C;
+$policy_text: #1F242F;
+$text_color: #323260;
+$white_text: #ffffff;
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: local('../fonts/roboto/Roboto-Regular.ttf');
+}
+
+@mixin font($size: 14px, $line-height: 1.5em) {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $line-height;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 1200px;
+  width: 100%;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+  }
+
+  .header__container {
+
+    .header__nav {
+      justify-content: flex-end;
+      background: none;
+    }
+  }
+
+  .delivery_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9%;
+    width: 100%;
+
+    .delivery__chose {
+      max-width: 580px;
+      width: 100%;
+    }
+
+    .delivery__header {
+      @include font(42px, 1.1em);
+      color: $text_color;
+      margin-bottom: 37px;
+    }
+
+    .delivery__info {
+      @include font(16px);
+      color: $text_color;
+    }
+
+    .delivery__destination {
+      @include font(24px, 1.33em);
+      color: $text_color;
+    }
+
+    .delivery__destination_chose {
+      @include font(20px);
+      background-color: $gray;
+      border: none;
+      border-radius: 10px;
+      height: 60px;
+      padding: 0 15px 0 15px;
+      margin-top: 11px;
+      max-width: 580px;
+      width: 100%;
+    }
+
+    .delivery__icons {
+      margin-top: 87px;
+      display: flex;
+      align-items: center;
+
+      .icon_sdec {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .delivery__payment {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9%;
+    width: 100%;
+
+    .delivery__text {
+      @include font(16px, 1.5em);
+      color: $text_color;
+      width: 66%;
+    }
+
+    .delivery__payment__icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .delivery__payment__icons-mir_icon {
+      margin: 0 27px;
+    }
+  }
+
+  .good_packaging {
+    display: flex;
+    align-items: center;
+    background-color: $gray;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='41' fill='none'%3E%3Cg fill='%2334302E' clip-path='url(%23clip0)'%3E%3Cpath d='M24.32 35.92l-.24-.38-.99-1.5a9.1 9.1 0 01-2.2-.7 10.98 10.98 0 01-4.19-3.76c-1.54-2.22-2.98-4.5-4.47-6.74-1.55-2.37-3.12-4.72-4.66-7.1-.27-.4-.7-1-.61-1.71.07-.51.34-.82.73-1.09.36-.24 1.1-.2 1.54.03.47.23.82.75 1.14 1.21.73 1.07 1.44 2.18 2.16 3.25l1.06 1.59c.39.56 1.11 2.11 1.98 1.51.8-.56-.25-1.82-.58-2.32-.36-.52-.7-1.06-1.05-1.59-1.6-2.5-3.24-4.95-4.77-7.49-.7-1.14-.47-1.88.44-2.36.87-.48 1.58-.2 2.3.9 1.88 2.82 3.74 5.65 5.61 8.48.27.4.42.73.92.9.36.11.72.05.86-.32.23-.63.04-.95-.28-1.45l-6.6-10c-.72-1.1-.49-2.12.56-2.59.8-.34 1.53-.05 2.18.92 2.24 3.38 4.48 6.77 6.7 10.17.37.55.81 1.01 1.46.56.62-.43.27-.98-.06-1.48-1.73-2.6-3.45-5.21-5.17-7.83a4.42 4.42 0 01-.58-1.11c-.28-.88.34-1.8 1.26-1.96.94-.17 1.4.4 1.83 1.06 2.93 4.44 5.85 8.89 8.82 13.32.27.4.85.88 1.27.87.79-.03.7-.83.75-1.41.12-1.42.18-2.84.33-4.26.12-1.1.8-1.73 1.73-1.7.83 0 1.54.66 1.6 1.72.25 3.87.52 7.74.63 11.6a10 10 0 01-.37 2.98 9.3 9.3 0 01-.3.86l.76 1.15.3.46 2.14 3.24-11.63 7.55-2.3-3.5v.02zm-6.31-2.24c-.33.11-.67.2-1.03.28l-.93 1.55-.23.37-2.17 3.59-11.92-7.1 2.02-3.33.28-.46.72-1.19a9.43 9.43 0 01-.83-3.8c-.04-3.87.07-7.75.17-11.62.03-1.05.7-1.75 1.54-1.79a1.6 1.6 0 011.63 1.06c-.21.1-.42.26-.67.54a4.05 4.05 0 00-.37 4.88c2.83 4.47 5.72 8.9 8.66 13.29a16.51 16.51 0 003.33 3.65l-.2.08zm5.7-30.43c.6-1 1.34-1.32 2.14-1 1.06.44 1.34 1.44.66 2.56l-1.26 2.1-1.96-2.97.42-.69zm6.23 9.16l-.1 1.25c0 .03-.04.04-.05.02l-.48-.64c.18-.26.39-.49.63-.63zm-2.83-5.24c.68-1.12 1.38-1.42 2.26-.99.94.46 1.2 1.2.54 2.36-.54.99-1.1 1.94-1.66 2.9L26.3 8.5l.8-1.33h.01zm9.71 19.87c.78-2.15.77-4.43.65-6.67-.15-3.01-.4-6.02-.68-9.02-.18-1.92-1.58-3.2-3.32-3.2-.63 0-1.22.17-1.73.49.6-2.13-.2-3.46-3.09-4.48l-.02-.03c.06-1.54-.32-2.47-1.7-3.25-1.4-.8-2.76-.9-4 .7 0 0-.34.42-.34.4-.19-.87-.9-1.4-1.49-1.66A3.03 3.03 0 0018.42.3c-.25.06-.5.15-.77.28-.57.27-1.27.84-1.42 1.72l-.36-.4c-1.3-1.54-2.66-1.38-4.03-.54-1.34.83-1.68 1.8-1.56 3.32 0 0 0 .02-.02.03C7.63 5.77 6.79 7 7.22 8.85c-.5-.26-1.05-.4-1.63-.38-1.73.07-3.08 1.43-3.18 3.35-.16 3-.3 6.03-.33 9.04-.03 2.24.05 4.52.9 6.63L.02 32.42 14.43 41l3.28-5.42c.74-.19 1.47-.5 2.17-.88.84.46 1.69.79 2.56.98l3.5 5.3L40 31.83l-3.18-4.8z'/%3E%3Cpath d='M29.83 22.92c-.13.37-.33.7-.6.99l-4.79 5.03-4.63-4.87-.04-.02c-.1-.1-.2-.2-.27-.3a2.76 2.76 0 01-.61-1.74c0-.3.05-.61.15-.9a2.44 2.44 0 012.27-1.72c.94 0 1.8.59 2.2 1.52a1 1 0 00.92.59c.4 0 .76-.23.91-.6a2.43 2.43 0 012.2-1.51c1.35 0 2.44 1.17 2.44 2.62 0 .32-.06.63-.16.91zm-2.28-4.79c-1.27 0-2.44.7-3.12 1.8a3.67 3.67 0 00-3.11-1.8 3.71 3.71 0 00-3.47 2.56 4.04 4.04 0 00.03 2.73l.57-.27-.57.27.57-.27-.57.27.03.05a4.08 4.08 0 001 1.49l5.53 5.8 5.73-6A3.97 3.97 0 0031.24 22a3.8 3.8 0 00-3.7-3.88z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h40v41H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+    background-position-y: center;
+    border-radius: 12px;
+    height: 101px;
+    padding: 0 2% 0 80px;
+    margin: 40px auto 60px auto;
+    max-width: 980px;
+    width: 100%;
+
+    .good_packaging__text {
+      @include font();
+      color: $text_color;
+      width: 61em;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .delivery_container {
+      flex-direction: column;
+      align-items: center;
+
+      .delivery__header {
+        text-align: center;
+      }
+
+      .delivery__info {
+        text-align: center;
+      }
+
+      .delivery__icons {
+        margin-top: 40px;
+      }
+    }
+    .delivery__payment {
+      flex-direction: column;
+      align-items: center;
+
+      .delivery__payment__icons {
+        margin-top: 40px;
+      }
+
+      .delivery__text {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    background-color: $dark_green;
+  }
+}

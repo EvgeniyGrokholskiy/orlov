@@ -1,0 +1,82 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: local("../fonts/roboto/Roboto-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .header__container {
+  margin: 0;
+}
+.wrapper .header__container .header__link {
+  text-decoration: none;
+}
+.wrapper .header__container .header__link .header__back_link {
+  cursor: pointer;
+  margin-left: 25px;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  color: #000000;
+}
+.wrapper .header__container .header__nav {
+  justify-content: flex-end;
+  background: none;
+}
+.wrapper .section_container {
+  padding-right: 110px;
+}
+.wrapper .policy__header {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0;
+  color: #323260;
+  margin: 200px 0 46px 111px;
+}
+.wrapper .policy__h2 {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  color: #323260;
+  margin: 38px 0 22px 111px;
+}
+.wrapper .policy__text {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0;
+  color: #1F242F;
+  margin-left: 212px;
+}
+.wrapper .policy_link {
+  text-decoration: none;
+  color: #3E81FB;
+}
+.wrapper .footer {
+  background-color: #326034;
+  margin-top: 60px;
+}
+
+/*# sourceMappingURL=policy.css.map */

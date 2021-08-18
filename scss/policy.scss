@@ -1,0 +1,92 @@
+$black_text: #000000;
+$button_enabled: black;
+$button_disabled: gray;
+$dark_green: #326034;
+$gray: #EBEBEB;
+$light_blue: #3E81FB;
+$orange: #FD7900;
+$price_color: #6A6E7C;
+$policy_text: #1F242F;
+$text_color: #323260;
+$white_text: #ffffff;
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: local('../fonts/roboto/Roboto-Regular.ttf');
+}
+
+@mixin font($size: 14px, $line-height: 1.5em) {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $line-height;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header__container {
+    margin: 0;
+
+    .header__link {
+      text-decoration: none;
+
+      .header__back_link {
+        cursor: pointer;
+        margin-left: 25px;
+        @include font(20px);
+        color: $black_text;
+      }
+    }
+
+    .header__nav {
+      justify-content: flex-end;
+      background: none;
+    }
+  }
+
+  .section_container {
+    padding-right: 110px;
+  }
+
+  .policy__header {
+    @include font(42px, 1.1em);
+    color: $text_color;
+    margin: 200px 0 46px 111px;
+  }
+
+  .policy__h2 {
+    @include font(24px, 1.5em);
+    color: $text_color;
+    margin: 38px 0 22px 111px;
+  }
+
+  .policy__text {
+    @include font(16px, 1.3em);
+    color: $policy_text;
+    margin-left: 212px;
+  }
+
+  .policy_link {
+    text-decoration: none;
+    color: $light_blue;
+  }
+
+  .footer {
+    background-color: $dark_green;
+    margin-top: 60px;
+  }
+}
