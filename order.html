@@ -60,7 +60,7 @@
                     <div class="order_constructor__image">
                         <div class="order_construction__background_image">
                             <div class="tuning_buttons">
-                                <button id="increase" class="increase">
+                                <button id="increase" class="increase" onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg" width="15"
                                          height="15" viewBox="0 0 1267.000000 1280.000000"
                                          preserveAspectRatio="xMidYMid meet">
@@ -70,11 +70,12 @@
                                         </g>
                                     </svg>
                                 </button>
-                                <button id="reduction" class="reduction">
+                                <button id="reduction" class="reduction" onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         height="15px" id="Layer_1" viewBox="0 0 24 24"
-                                         width="15px" xml:space="preserve"><path d="M18,11H6c-1.104,0-2,0.896-2,2s0.896,2,2,2h12c1.104,0,2-0.896,2-2S19.104,11,18,11z"/></svg>
+                                         height="15px" viewBox="0 0 24 24"
+                                         width="15px">
+                                        <path d="M18,11H6c-1.104,0-2,0.896-2,2s0.896,2,2,2h12c1.104,0,2-0.896,2-2S19.104,11,18,11z"/>
+                                    </svg>
                                 </button>
                                 <button id="left" class="move_button">влево</button>
                                 <button id="right" class="move_button">вправо</button>
@@ -183,7 +184,7 @@
                             <span class="checkbox"></span>
                         </label>
 
-                        <div class="form_to_email_container hidden">
+                        <div class="form_to_email_container hidden" onclick="closeForm()">
 
                             <div class="close" id="close" title="Закрыть">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#888"

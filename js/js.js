@@ -1,13 +1,13 @@
 ;
 
+//------------working with uploaded image--------------------
 
-let uploadFile;
+let uploadFileURL;
 let imgTest = document.getElementById('upload_file_miniature_img')
 let imgInCover = document.getElementById('user_image');
+let file;
 
 //let userImgBackground = document.querySelector('.order_construction__user_img');
-
-let file;
 
 function readFile(input) {
 
@@ -17,14 +17,16 @@ function readFile(input) {
 
     reader.readAsBinaryString(file);
 
-    uploadFile = URL.createObjectURL(file);
+    uploadFileURL = URL.createObjectURL(file);
 
-    imgTest.src = uploadFile;
-    imgInCover.src = uploadFile;
-    //userImgBackground.setAttribute('style',`background-image: url("${uploadFile}");`);
+    imgTest.src = uploadFileURL;
+    imgInCover.src = uploadFileURL;
+    //userImgBackground.setAttribute('style',`background-image: url("${uploadFileURL}");`);
 
 }
+//------------------------------------------------------------------
 
+//------------------Text on player cover-----------------------------------------
 
 let userTrackNameSpan = document.getElementById('track_name_span');
 let userTrackNameInput = document.getElementById('track_name');
@@ -64,26 +66,26 @@ function changeText() {
     }
     userLowerTextSpan.innerText = userLowerTextInput.value;
 }
+//-------------------------------------------------------------------------------
 
-function increaseImg() {
-    magnificationRatio += 5;
-    uploadedFileMiniature.style.height = `${magnificationRatio}%`;
-    imgInCover.style.height = `${magnificationRatio}%`;
-}
-
-function reductionImg() {
-    magnificationRatio -= 5;
-    uploadedFileMiniature.style.height = `${magnificationRatio}%`;
-    imgInCover.style.height = `${magnificationRatio}%`;
+//-----------------------------changing uploaded image----------------------------
+//----------------------scaling image---------------------------------------------
+function scaling(id) {
+    if (id === 'increase') {
+        magnificationRatio += 5;
+        uploadedFileMiniature.style.height = `${magnificationRatio}%`;
+        imgInCover.style.height = `${magnificationRatio}%`;
+    }else if (id === 'reduction') {
+        magnificationRatio -= 5;
+        uploadedFileMiniature.style.height = `${magnificationRatio}%`;
+        imgInCover.style.height = `${magnificationRatio}%`;
+    }
 }
 
 let uploadedFileMiniature = document.getElementById('upload_file_miniature_img');
-let buttonIncrease = document.getElementById('increase');
-let buttonReduction = document.getElementById('reduction');
 let magnificationRatio = 100;
 
-buttonIncrease.onclick = increaseImg;
-buttonReduction.onclick = reductionImg;
+//---------------------------moving image----------------------------------------
 
 function addListenerToMoveButtons() {
     let buttons = document.querySelectorAll('.move_button');
@@ -97,15 +99,15 @@ let positionLeft = 0;
 
 function moveImg(event) {
 
-    let button = event.target;
+    let button = event.target.id;
 
-    if (button.id === 'right') {
+    if (button === 'right') {
         positionLeft += 5;
-    } else if (button.id === 'left') {
+    } else if (button === 'left') {
         positionLeft -= 5;
-    } else if (button.id === 'up') {
+    } else if (button === 'up') {
         positionTop -= 5;
-    } else if (button.id === 'down') {
+    } else if (button === 'down') {
         positionTop += 5;
     }
 
@@ -117,7 +119,7 @@ function moveImg(event) {
 
 addListenerToMoveButtons();
 
-//---------------------------------------------------price change------------------------
+//---------------------------------------------------price calculate------------------------
 
 function listenerToInputOption() {
     for (let i = 0; i < optionInputs.length; i++) {
@@ -126,16 +128,10 @@ function listenerToInputOption() {
 }
 
 function priceChange() {
+
     let showPrice = document.querySelector('.price__js');
     optionPrice = 0
 
-    for (let i = 0; i < optionInputs.length; i++) {
-        if (optionInputs[i].checked) {
-            optionPriceArray[i] = optionInputs[i].dataset.price;
-        } else {
-            optionPriceArray[i] = '0';
-        }
-    }
     if (size === 'small') {
         price = 990;
     } else if (size === 'medium') {
@@ -146,16 +142,24 @@ function priceChange() {
         price = 490;
     }
 
+    for (let i = 0; i < optionInputs.length; i++) {
+        if (optionInputs[i].checked) {
+            optionPriceArray[i] = optionInputs[i].dataset.price;
+        } else {
+            optionPriceArray[i] = '0';
+        }
+    }
+
     for (let i = 0; i < optionPriceArray.length; i++) {
         optionPrice += +optionPriceArray[i];
     }
-    showPrice.innerHTML = +price + +optionPrice;
-    priceToEmail = +price + +optionPrice;
+    showPrice.innerHTML = +price + +optionPrice; //price on page
+    priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
 }
 
-let size = sessionStorage.getItem('size'); //data from home-page
+let size = sessionStorage.getItem('size'); //data from home-page: size of glass
 
-let cover = sessionStorage.getItem('cover'); //data from home-page
+let cover = sessionStorage.getItem('cover'); //data from home-page: player skin
 
 
 let optionInputs = document.querySelectorAll('.checkbox_to_hide');
