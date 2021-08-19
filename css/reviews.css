@@ -49,6 +49,7 @@ html, body {
 .wrapper .reviews {
   flex: 1 0 auto;
   padding-left: 12%;
+  margin-bottom: 4%;
 }
 .wrapper .reviews .reviews__header {
   font-family: Roboto-Regular, sans-serif;
