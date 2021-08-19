@@ -1,5 +1,5 @@
 let imagesArray = document.querySelectorAll('.section_1__slider div');
-let positionArray = [0, 250, 500, 750, 1000];
+let positionArray = [0, 50, 100, 150, 200];
 let sliderIndex = 0;
 
 
@@ -20,7 +20,7 @@ function addEventListener(id, type, functionName) {
 
 function setPositionForImg() {
     for (let i = 0; i < imagesArray.length; i++) {
-        imagesArray[i].setAttribute('style', `left: ${positionArray[i]}px;`);
+        imagesArray[i].setAttribute('style', `left: ${positionArray[i]}%;`);
     }
 }
 
@@ -31,7 +31,7 @@ function nextSlide() {
     if (sliderIndex <= 3) {
 
         for (let i = 0; i < positionArray.length; i++) {
-            positionArray[i] -= 250;
+            positionArray[i] -= 50;
         }
     }
     if (sliderIndex === 3) {
@@ -47,7 +47,7 @@ function prevSlide() {
     if (sliderIndex > 0) {
         sliderIndex -= 1;
         for (let i = 0; i < positionArray.length; i++) {
-            positionArray[i] += 250;
+            positionArray[i] += 50;
         }
     }
     if (sliderIndex === 0){

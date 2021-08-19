@@ -7,7 +7,7 @@ $(function() {
     http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         alert(http.responseText);
-        if (http.responseText.indexOf(f.nameFF.value) == 0) { // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
+        if (http.responseText.indexOf(f.first_name.value) == 0) { // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
           th.trigger("reset");
         }
       }
