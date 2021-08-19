@@ -633,6 +633,17 @@ html, body {
   width: 100%;
 }
 
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  width: 75px;
+}
+
+.footer__nav_container{
+  display: flex;
+  flex-wrap: wrap;
+}
 .footer_ul, .footer_ul_middle {
   padding: 0;
 }
@@ -677,6 +688,12 @@ html, body {
 @media screen and (max-width: 709px) {
   .footer {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 474px){
+  .footer__logo {
+    margin-bottom: 20px;
   }
 }
 
