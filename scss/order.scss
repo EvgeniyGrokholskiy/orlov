@@ -97,12 +97,12 @@ html, body {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 39%;
-          height: 31%;
+          width: 11.88em;
+          height: 11.88em;
           overflow: hidden;
           position: absolute;
           background: gray center no-repeat;
-          transform: translateY(-47%);
+          transform: translateY(-34%);
           background-size: cover;
           /*-webkit-filter: blur(5px);
           -moz-filter: blur(5px);
@@ -124,12 +124,27 @@ html, body {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          padding-top: 0.1em;
           position: absolute;
-          top: 61%;
+          top: 62%;
+
+          &-apple {
+
+          }
+
+          &-spotify {
+            padding-top: 0.2em;
+            top: 57%;
+          }
+
+          &-vk {
+
+          }
 
           .user_text {
-            background-color: white;
-            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0);
+            color: $white_text;
+            font-size: 0.8em;
             font-weight: bold;
             text-align: center;
 
@@ -137,14 +152,50 @@ html, body {
 
           .user_text-track {
 
+            &-apple {
+
+            }
+
+            &-spotify {
+              font-size: 1em;
+            }
+
+            &-vk {
+
+            }
           }
 
           .user_text-performer {
-            margin-top: .6em;
+            font-size: 0.6em;
+            margin-top: .1em;
+
+            &-apple {
+
+            }
+
+            &-spotify {
+              margin-top: 0.5em;
+            }
+
+            &-vk {
+
+            }
           }
 
           .user_text-lower {
-            margin-top: 3.5em;
+            margin-top: 5.6em;
+
+            &-apple {
+
+            }
+
+            &-spotify {
+              margin-top: 6.7em;
+            }
+
+            &-vk {
+
+            }
           }
         }
       }
@@ -158,7 +209,9 @@ html, body {
       padding: 0 4%;
 
       .order_constructor__sample .order_constructor__image .order_construction__background_image {
+        padding: 5% 0 30px 0;
         margin: 0 0 30px 0;
+        width: 100%;
       }
 
       .order_constructor__main {

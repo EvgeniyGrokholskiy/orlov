@@ -1,4 +1,41 @@
 ;
+//--------------------get data from homepage-----------------------------
+
+let size = sessionStorage.getItem('size'); //data from home-page: size of glass
+
+let cover = sessionStorage.getItem('cover'); //data from home-page: player skin
+
+//------------------------------------------------------------
+
+
+//------------show skin of player------------------------------
+
+let skinImg = document.getElementById('player_theme');
+
+function showSkin() {
+    let textBlock = document.querySelector('.order_construction__user_text');
+    let trackNameSpan = document.getElementById('track_name_span');
+    let performerSpan = document.getElementById('performer_name_span');
+    let lowerTextSpan = document.getElementById('lower_text_span');
+    let prefix;
+
+    if (cover === 'apple'){
+        skinImg.src = 'img/apple_w_o_text.jpg';
+        prefix = 'apple';
+    }else if (cover === 'spotify'){
+        skinImg.src = 'img/spotify_w_o_text.jpg';
+        prefix = 'spotify';
+    }else if (cover === 'vkMusic'){
+        skinImg.src = 'img/vk_w_o_text.jpg';
+        prefix = 'vk'
+    }
+
+    textBlock.classList.add(`order_construction__user_text-${prefix}`);
+    trackNameSpan.classList.add(`user_text-track-${prefix}`);
+    performerSpan.classList.add(`user_text-performer-${prefix}`);
+    lowerTextSpan.classList.add(`user_text-lower-${prefix}`);
+}
+showSkin();
 
 //------------working with uploaded image--------------------
 
@@ -54,22 +91,31 @@ userLowerTextInput.oninput = changeText;
 
 function changeText() {
 
+    let trackNameLabel = document.getElementById('input_for_track_name');
+    let performerLabel = document.getElementById('input_for_performer_name');
+
     if (userTrackNameInput.value === '') {
         userTrackNameSpan.innerText = 'Название трека';
     } else {
         userTrackNameSpan.innerText = userTrackNameInput.value;
+        trackNameLabel.classList.remove('error');
+        trackNameLabel.textContent = 'Название трека';
     }
     if (userPerformerNameInput.value === '') {
         userPerformerNameSpan.innerText = 'Исполнитель';
     } else {
         userPerformerNameSpan.innerText = userPerformerNameInput.value;
+        performerLabel.classList.remove('error');
+        performerLabel.textContent = 'Исполнитель';
     }
     userLowerTextSpan.innerText = userLowerTextInput.value;
 }
 //-------------------------------------------------------------------------------
 
 //-----------------------------changing uploaded image----------------------------
+
 //----------------------scaling image---------------------------------------------
+
 function scaling(id) {
     if (id === 'increase') {
         magnificationRatio += 5;
@@ -153,13 +199,11 @@ function priceChange() {
     for (let i = 0; i < optionPriceArray.length; i++) {
         optionPrice += +optionPriceArray[i];
     }
-    showPrice.innerHTML = +price + +optionPrice; //price on page
+    showPrice.textContent = +price + +optionPrice; //price on page
     priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
 }
 
-let size = sessionStorage.getItem('size'); //data from home-page: size of glass
 
-let cover = sessionStorage.getItem('cover'); //data from home-page: player skin
 
 
 let optionInputs = document.querySelectorAll('.checkbox_to_hide');
@@ -189,7 +233,7 @@ function prepareToSendForm(e) {
         labelForTrackName.classList.remove('error');
         labelForTrackName.innerHTML = 'Название трека';
         labelForPerformerName.classList.remove('error');
-        labelForPerformerName.innerHTML = 'Исполнитель';
+        labelForPerformerName.textContent = 'Исполнитель';
         document.getElementById('link').setAttribute('href', '')
         price.value = priceToEmail;
         sizeOfGlass.value = size;
@@ -198,13 +242,13 @@ function prepareToSendForm(e) {
         console.log(price.value, sizeOfGlass.value, playerCover.value);
     } else if (userTrackNameInput.value === '') {
         labelForTrackName.classList.add('error');
-        labelForTrackName.innerHTML = 'Ведите название трека';
+        labelForTrackName.textContent = 'Ведите название трека';
         button.setAttribute('href', '#h123');
     } else if (userPerformerNameInput.value === '') {
         labelForTrackName.classList.remove('error');
-        labelForTrackName.innerHTML = 'Название трека';
+        labelForTrackName.textContent = 'Название трека';
         labelForPerformerName.classList.add('error');
-        labelForPerformerName.innerHTML = 'Укажите имя исполнителя';
+        labelForPerformerName.textContent = 'Укажите имя исполнителя';
         button.setAttribute('href', '#h123');
     }
 }

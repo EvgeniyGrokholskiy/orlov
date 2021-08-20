@@ -21,17 +21,19 @@ let sizeOfGift = '';
 
 //-------------------------------------------------------------------------
 
-//--------------------------------skin of player select--------------------
+//--------------------------------select skin of player--------------------
 
-function coverSelect(button) {
+function coverSelect(selectCover) {
 
     let coverSelectLink = document.getElementById('cover_select');
+    let coverSample = document.getElementById('cover_img');
 
-    cover = button;
+    cover = selectCover;
     sessionStorage.setItem('cover', cover);
 
     for (let i = 0; i < coverSelectButtons.length; i++) {
         if(cover === coverSelectButtons[i].dataset.cover){
+            coverSample.src = coverSelectButtons[i].dataset.src;
             coverSelectButtons[i].classList.add('selected');
             coverSelectLink.classList.remove('error');
         }else {
@@ -41,7 +43,9 @@ function coverSelect(button) {
 }
 
 let coverSelectButtons = document.querySelectorAll('.cover_select__button');
-let cover = '';
+let cover = 'apple';
+
+coverSelect('apple');
 
 //------------------------validation size and skin select------------------------
 
