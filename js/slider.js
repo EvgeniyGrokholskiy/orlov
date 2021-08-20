@@ -23,6 +23,11 @@ function setPositionForImg() {
         imagesArray[i].setAttribute('style', `left: ${positionArray[i]}%;`);
     }
 }
+document.querySelector("body").addEventListener('click' ,log);
+function log(e){
+    console.log(e);
+}
+
 
 function nextSlide() {
     prevButton.removeAttribute('disabled');

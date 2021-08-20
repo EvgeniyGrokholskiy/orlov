@@ -469,6 +469,7 @@ html, body {
         .size_select__price {
           @include font(16px);
           color: $price_color;
+          width: 3.2em;
         }
       }
 
