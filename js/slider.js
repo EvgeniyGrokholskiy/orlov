@@ -13,25 +13,20 @@ addEventListener('prev_slide_button', 'click', prevSlide);
 
 
 function addEventListener(id, type, functionName) {
-    let item = document.getElementById(id);
-    item.addEventListener(type, functionName);
+    document.getElementById(id).addEventListener(type, functionName);
 }
 
 
 function setPositionForImg() {
     for (let i = 0; i < imagesArray.length; i++) {
-        imagesArray[i].setAttribute('style', `left: ${positionArray[i]}%;`);
+        imagesArray[i].setAttribute('style', 'left: '+positionArray[i]+'%;');
     }
-}
-document.querySelector("body").addEventListener('click' ,log);
-function log(e){
-    console.log(e);
 }
 
 
 function nextSlide() {
     prevButton.removeAttribute('disabled');
-    prevButtonSvg.classList.remove('icon_prev-disabled')
+    prevButtonSvg.setAttribute('style', 'fill: black');
     sliderIndex += 1;
     if (sliderIndex <= 3) {
 
@@ -41,14 +36,14 @@ function nextSlide() {
     }
     if (sliderIndex === 3) {
         nextButton.setAttribute('disabled', '');
-        nextButtonSvg.classList.add('icon_next-disabled')
+        nextButtonSvg.setAttribute('style', 'fill: gray');
     }
     setPositionForImg();
 }
 
 function prevSlide() {
     nextButton.removeAttribute('disabled');
-    nextButtonSvg.classList.remove('icon_next-disabled');
+    nextButtonSvg.setAttribute('style', 'fill: black');
     if (sliderIndex > 0) {
         sliderIndex -= 1;
         for (let i = 0; i < positionArray.length; i++) {
@@ -57,7 +52,7 @@ function prevSlide() {
     }
     if (sliderIndex === 0){
         prevButton.setAttribute('disabled', '');
-        prevButtonSvg.classList.add('icon_prev-disabled');
+        prevButtonSvg.setAttribute('style', 'fill: gray');
     }
     setPositionForImg();
 }

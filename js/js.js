@@ -19,22 +19,23 @@ function showSkin() {
     let lowerTextSpan = document.getElementById('lower_text_span');
     let prefix;
 
-    if (cover === 'apple'){
+    if (cover === 'apple') {
         skinImg.src = 'img/apple_w_o_text.jpg';
         prefix = 'apple';
-    }else if (cover === 'spotify'){
+    } else if (cover === 'spotify') {
         skinImg.src = 'img/spotify_w_o_text.jpg';
         prefix = 'spotify';
-    }else if (cover === 'vkMusic'){
+    } else if (cover === 'vkMusic') {
         skinImg.src = 'img/vk_w_o_text.jpg';
         prefix = 'vk'
     }
 
-    textBlock.classList.add(`order_construction__user_text-${prefix}`);
-    trackNameSpan.classList.add(`user_text-track-${prefix}`);
-    performerSpan.classList.add(`user_text-performer-${prefix}`);
-    lowerTextSpan.classList.add(`user_text-lower-${prefix}`);
+    textBlock.classList.add('order_construction__user_text-' + prefix);
+    trackNameSpan.classList.add('user_text-track-' + prefix);
+    performerSpan.classList.add('user_text-performer-' + prefix);
+    lowerTextSpan.classList.add('user_text-lower-' + prefix);
 }
+
 showSkin();
 
 //------------working with uploaded image--------------------
@@ -50,9 +51,9 @@ function readFile(input) {
 
     file = input.files[0];
 
-    let reader = new FileReader();
+    //let reader = new FileReader();
 
-    reader.readAsBinaryString(file);
+    //reader.readAsBinaryString(file);
 
     uploadFileURL = URL.createObjectURL(file);
 
@@ -61,6 +62,7 @@ function readFile(input) {
     //userImgBackground.setAttribute('style',`background-image: url("${uploadFileURL}");`);
 
 }
+
 //------------------------------------------------------------------
 
 //------------------Text on player cover-----------------------------------------
@@ -110,6 +112,7 @@ function changeText() {
     }
     userLowerTextSpan.innerText = userLowerTextInput.value;
 }
+
 //-------------------------------------------------------------------------------
 
 //-----------------------------changing uploaded image----------------------------
@@ -119,12 +122,12 @@ function changeText() {
 function scaling(id) {
     if (id === 'increase') {
         magnificationRatio += 5;
-        uploadedFileMiniature.style.height = `${magnificationRatio}%`;
-        imgInCover.style.height = `${magnificationRatio}%`;
-    }else if (id === 'reduction') {
+        uploadedFileMiniature.style.height = magnificationRatio + '%';
+        imgInCover.style.height = magnificationRatio + '%';
+    } else if (id === 'reduction') {
         magnificationRatio -= 5;
-        uploadedFileMiniature.style.height = `${magnificationRatio}%`;
-        imgInCover.style.height = `${magnificationRatio}%`;
+        uploadedFileMiniature.style.height = magnificationRatio + '%';
+        imgInCover.style.height = magnificationRatio + '%';
     }
 }
 
@@ -157,10 +160,10 @@ function moveImg(event) {
         positionTop += 5;
     }
 
-    uploadedFileMiniature.style.top = `${positionTop}px`;
-    uploadedFileMiniature.style.left = `${positionLeft}px`
-    imgInCover.style.top = `${positionTop}px`;
-    imgInCover.style.left = `${positionLeft}px`;
+    uploadedFileMiniature.style.top = positionTop + 'px';
+    uploadedFileMiniature.style.left = positionLeft + 'px';
+    imgInCover.style.top = positionTop + 'px';
+    imgInCover.style.left = positionLeft + 'px';
 }
 
 addListenerToMoveButtons();
@@ -202,8 +205,6 @@ function priceChange() {
     showPrice.textContent = +price + +optionPrice; //price on page
     priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
 }
-
-
 
 
 let optionInputs = document.querySelectorAll('.checkbox_to_hide');
