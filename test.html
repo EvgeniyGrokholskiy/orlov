@@ -11,28 +11,21 @@
 <body>
 <div class="slider_wrapper">
     <div class="slider">
-        <img class="position_1" src="/img/slide1_cover-example-custom.webp" alt="">
-        <img class="position_2" src="/img/slide2_cover-example-max-korj-2.webp" alt="">
-        <img class="position_3" src="/img/slide3_cover-example-max-korj-2.webp" alt="">
-        <img class="position_4" src="/img/slide4_cover-example-max-korj-2.webp" alt="">
-        <img class="position_5" src="/img/slide5_cover-example-max-korj-2.webp" alt="">
-    </div>
-
-    <div class="buttons">
-        <button id="prev_slide_button" class="prev_btn" disabled>
-            <svg width="43" height="30">
-                <svg class="icon_prev icon_prev-disabled " viewBox="0 0 44 30">
-                    <path d="M41.308 12.917H7.768l9.251-9.23A2.16 2.16 0 0 0 13.964.634L1.056 13.54a2.151 2.151 0 0 0 0 3.033l12.908 12.909a2.151 2.151 0 0 0 3.033-3.034l-9.229-9.23h33.54a2.15 2.15 0 1 0 0-4.302z"></path>
-                </svg>
-            </svg>
-        </button>
-        <button id="next_slide_button" class="next_btn">
-            <svg width="43" height="30">
-                <svg class="icon_next" viewBox="0 0 44 30">
-                    <path d="M3.123 12.917h33.54l-9.251-9.23A2.16 2.16 0 1 1 30.467.634L43.375 13.54a2.151 2.151 0 0 1 0 3.033L30.467 29.483a2.151 2.151 0 0 1-3.034-3.034l9.23-9.23H3.123a2.151 2.151 0 1 1 0-4.302z"></path>
-                </svg>
-            </svg>
-        </button>
+        <div class="slider__item">
+            <img class="position_1" src="/img/slide1_cover-example-custom.webp" alt="">
+        </div>
+        <div class="slider__item">
+            <img class="position_2" src="/img/slide2_cover-example-max-korj-2.webp" alt="">
+        </div>
+        <div class="slider__item">
+            <img class="position_3" src="/img/slide3_cover-example-max-korj-2.webp" alt="">
+        </div>
+        <div class="slider__item">
+            <img class="position_4" src="/img/slide4_cover-example-max-korj-2.webp" alt="">
+        </div>
+        <div class="slider__item">
+            <img class="position_5" src="/img/slide5_cover-example-max-korj-2.webp" alt="">
+        </div>
     </div>
 </div>
 
@@ -41,7 +34,8 @@
         <div class="order_constructor__sample">
             <div class="order_constructor__image">
                 <div class="order_construction__background_image">
-                    <img id="player_theme" class="player_theme" src="/img/player_1.jpg" alt="Тема плейера" width="720" height="1280">
+                    <img id="player_theme" class="player_theme" src="/img/player_1.jpg" alt="Тема плейера" width="720"
+                         height="1280">
                     <div class="order_construction__user_img">
                         <img id="user_image" src="" alt="">
                     </div>
@@ -74,7 +68,7 @@
                 <input id="upload_file" type="file" onchange="readFile(this)">
 
                 <div class="order_constructor__file_miniature">
-                    <img id="upload_file_miniature_img"  class="uploaded_file_miniature_img" src="" alt="">
+                    <img id="upload_file_miniature_img" class="uploaded_file_miniature_img" src="" alt="">
                 </div>
                 <input type="submit" id="form_submit">
             </form>
@@ -87,9 +81,11 @@
         </div>
     </div>
 </div>
-
-<script src="js/js.js"></script>
-<script src="js/slider.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/test.js"></script>
+<!--<script src="js/js.js"></script>-->
+<!--<script src="js/slider.js"></script>-->
 
 </body>
 </html>

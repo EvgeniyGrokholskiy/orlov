@@ -88,11 +88,6 @@ html, body {
   background: gray center no-repeat;
   transform: translate(-50%, -34%);
   background-size: cover;
-  /*-webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
 }
 .wrapper .order_constructor .order_constructor__sample .order_construction__background_image .order_construction__user_img #user_image {
   position: relative;
@@ -150,9 +145,6 @@ html, body {
     margin: 0 0 30px 0;
     width: 100%;
   }
-  .wrapper .order_constructor .order_constructor__main .checkout {
-    margin: 30px 0;
-  }
 }
 .wrapper .did_not_work {
   background-color: #EBEBEB;
@@ -200,9 +192,9 @@ html, body {
   height: 50px;
   width: 50px;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 940px) {
   .wrapper .did_not_work {
-    margin: 0;
+    display: none;
   }
 }
 .wrapper .order_preview__price {
@@ -227,6 +219,14 @@ html, body {
   letter-spacing: 0;
   color: #323260;
   margin-left: 73px;
+}
+@media screen and (max-width: 940px) {
+  .wrapper .order_preview__price {
+    display: none;
+  }
+  .wrapper .order_preview__delivery_price {
+    display: none;
+  }
 }
 .wrapper .order_constructor__main {
   position: relative;
@@ -367,6 +367,17 @@ html, body {
   height: 50px;
   width: 248px;
 }
+.wrapper .order_constructor__main .price_for_mobile {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  display: none;
+  color: #323260;
+  margin: 20px 0 0;
+}
 .wrapper .order_constructor__main .send_button {
   font-family: Roboto-Regular, sans-serif;
   font-size: 20px;
@@ -387,6 +398,14 @@ html, body {
 }
 .wrapper .order_constructor__main .error {
   color: red;
+}
+@media screen and (max-width: 940px) {
+  .wrapper .order_constructor__main .checkout {
+    margin: 30px 0;
+  }
+  .wrapper .order_constructor__main .price_for_mobile {
+    display: block;
+  }
 }
 @media screen and (max-width: 650px) {
   .wrapper .order_constructor__main {
@@ -411,18 +430,6 @@ html, body {
   }
 }
 .wrapper .form_to_email_container {
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px;
-  position: fixed;
-  bottom: -10%;
-  left: 50%;
-  background-color: white;
-  border: 2px solid darkgray;
-  border-radius: 20px;
-  transform: translate(-70%, -30%);
-  width: 100%;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -444,6 +451,9 @@ html, body {
   line-height: 1.5em;
   letter-spacing: 0;
   display: block;
+}
+.wrapper .form_to_email_container .form_label-permission {
+  font-size: 12px;
 }
 .wrapper .form_to_email_container .form_input {
   font-family: Roboto-Regular, sans-serif;
@@ -470,9 +480,25 @@ html, body {
   letter-spacing: 0;
   color: #323260;
 }
+.wrapper .form_to_email_container .permission {
+  margin-right: 10px;
+  vertical-align: middle;
+}
 @media screen and (max-width: 650px) {
   .wrapper .form_to_email_container {
     width: 95%;
+  }
+}
+.wrapper .did_not_work-for_mobile {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  .wrapper .did_not_work-for_mobile {
+    display: block;
+    margin: 0 0 30px;
+  }
+  .wrapper .did_not_work-for_mobile .did_not_work__text {
+    font-size: 16px;
   }
 }
 .wrapper .footer {

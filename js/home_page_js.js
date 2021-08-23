@@ -1,3 +1,23 @@
+$(document).ready(function () {
+    $('.slider').slick({
+        slidesToShow: 2,
+        infinite: false,
+    });
+});
+
+
+
+
+//---------------------to order animated movement-------------------------
+document.querySelector('.section_1__link').addEventListener('click',toOrder);
+
+function toOrder() {
+
+    let top = document.querySelector('#order').offsetTop;
+    $('body,html').animate({scrollTop: top}, 1000);
+
+}
+
 //------------------------------------size select-------------------------
 function sizeSelect(button) {
 

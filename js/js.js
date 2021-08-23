@@ -59,6 +59,14 @@ function readFile(input) {
 
     imgTest.src = uploadFileURL;
     imgInCover.src = uploadFileURL;
+
+    let top = document.getElementById('player_theme').offsetTop + 100; //Getting Y of target element
+
+
+    $('body,html').animate({scrollTop: top}, 1500); //Animated movement to target element
+
+
+    //window.location.hash="player_theme";
     //userImgBackground.setAttribute('style',`background-image: url("${uploadFileURL}");`);
 
 }
@@ -179,6 +187,7 @@ function listenerToInputOption() {
 function priceChange() {
 
     let showPrice = document.querySelector('.price__js');
+    let showPriceMobile = document.querySelector('.price_for_mobile');
     optionPrice = 0
 
     if (size === 'small') {
@@ -202,7 +211,8 @@ function priceChange() {
     for (let i = 0; i < optionPriceArray.length; i++) {
         optionPrice += +optionPriceArray[i];
     }
-    showPrice.textContent = +price + +optionPrice; //price on page
+    showPrice.textContent = +price + +optionPrice;//price on page
+    showPriceMobile.textContent = 'Итого: ' + (+price + +optionPrice) + ' р.';
     priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
 }
 

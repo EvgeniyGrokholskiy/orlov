@@ -70,7 +70,8 @@
                                         </g>
                                     </svg>
                                 </button>
-                                <button id="reduction" class="reduction tuning_buttons__item" onclick="scaling(this.id)">
+                                <button id="reduction" class="reduction tuning_buttons__item"
+                                        onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg"
                                          height="15px" viewBox="0 0 24 24"
                                          width="15px">
@@ -134,7 +135,8 @@
                         </div>
 
                         <label class="label_text" for="addition_text">Дополнительный текст
-                            <input class="checkbox_to_hide" id="addition_text" name="addition_text" type="checkbox" data-price="100"
+                            <input class="checkbox_to_hide" id="addition_text" name="addition_text" type="checkbox"
+                                   data-price="100"
                                    onchange="onOffLowerText()">
                             <span class="checkbox"></span>
                             <span class="addition_price">+100 р.</span>
@@ -206,6 +208,8 @@
                             <label class="form_label" for="email">Электронная почта</label>
                             <input class="form_input" id="email" name="email" type="email"
                                    placeholder="Введите электронную почту" required>
+                            <label for="permission" class="form_label form_label-permission"><input class="permission" id="permission" type="checkbox" required>Даю
+                                согласие на обработку персональных данных.</label>
                             <input class="send_button" type="submit" id="send_button" name="send_button"
                                    placeholder="Отправить" value="Отправить">
                             <input id="price" name="price" type="text" class="hidden">
@@ -218,9 +222,25 @@
                         </div>
 
                     </form>
+                    <span class="price_for_mobile"></span>
                     <a href="" id="link">
                         <button class="checkout" id="button" type="button">Оформить заказ</button>
                     </a>
+
+                    <div class="did_not_work did_not_work-for_mobile">
+                        <p class="did_not_work__text">
+                            Не получилось загрузить фото или есть другие вопросы или проблемы?
+                            Переходите в мессенджер, подскажем.
+                        </p>
+                        <div class="did_not_work__socials">
+                            <a class="did_not_work_link" href="#">
+                                <button class="did_not_work__whatsapp" tabindex="-1"></button>
+                            </a>
+                            <a class="did_not_work_link" href="#">
+                                <button class="did_not_work__instagram" tabindex="-1"></button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -257,8 +277,7 @@
 </div>
 
 <script src="js/js.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

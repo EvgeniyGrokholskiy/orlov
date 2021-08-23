@@ -1,4 +1,5 @@
-.slider {
+@charset "UTF-8";
+/*.slider {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -6,47 +7,55 @@
   height: 397px;
   margin: 50px auto;
   position: relative;
-}
-.slider img {
-  height: 100%;
-  margin: 0 10px;
-  position: absolute;
-  transition: all 0.5s linear;
-}
-.slider .position_1 {
-  top: 0;
-  left: 0;
-}
-.slider .position_2 {
-  left: 250px;
-}
-.slider .position_3 {
-  left: 500px;
-}
-.slider .position_4 {
-  left: 750px;
-}
-.slider .position_5 {
-  left: 1000px;
+
+  & img {
+    height: 100%;
+    margin: 0 10px;
+    position: absolute;
+    transition: all 0.5s linear;
+  }
+
+  .position_1 {
+    top: 0;
+    left: 0;
+  }
+
+  .position_2 {
+    left: 250px;
+  }
+
+  .position_3 {
+    left: 500px;
+  }
+
+  .position_4 {
+    left: 750px;
+  }
+
+  .position_5 {
+    left: 1000px;
+  }
 }
 
 .buttons {
   width: 475px;
   text-align: center;
   margin: 20px auto;
-}
-.buttons .prev_btn, .buttons .next_btn {
-  background: none;
-  border: none;
-}
-.buttons .prev_btn .icon_prev, .buttons .prev_btn .icon_next, .buttons .next_btn .icon_prev, .buttons .next_btn .icon_next {
-  fill: #3E81FB;
-  z-index: 999;
-}
-.buttons .prev_btn .icon_prev-disabled, .buttons .prev_btn .icon_next-disabled, .buttons .next_btn .icon_prev-disabled, .buttons .next_btn .icon_next-disabled {
-  fill: gray;
-}
 
+  .prev_btn, .next_btn {
+    background: none;
+    border: none;
+
+    .icon_prev, .icon_next {
+      fill: #3E81FB;
+      z-index: 999;
+
+      &-disabled {
+        fill: gray;
+      }
+    }
+  }
+}*/
 .wrapper {
   margin: 50px auto;
 }
@@ -135,5 +144,77 @@
   position: relative;
   height: 100%;
 }
+
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  max-width: 463px;
+  width: 100%;
+}
+
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide {
+  /*height: auto;
+  width: 232px;*/
+}
+.slick-slide img {
+  height: auto;
+  max-width: 223px;
+  width: 100%;
+}
+
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+.slick-arrow {
+  background: none;
+  border: none;
+  font-size: 0;
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 43px;
+  z-index: 99;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='43' height='30'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 30' %3E%3Cpath d='M41.308 12.917H7.768l9.251-9.23A2.16 2.16 0 0 0 13.964.634L1.056 13.54a2.151 2.151 0 0 0 0 3.033l12.908 12.909a2.151 2.151 0 0 0 3.033-3.034l-9.229-9.23h33.54a2.15 2.15 0 1 0 0-4.302z'%3E%3C/path%3E%3C/svg%3E%3C/svg%3E");
+  left: 39%;
+}
+
+.slick-arrow.slick-prev.slick-disabled {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='43' height='30'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 30' fill='gray'%3E%3Cpath d='M41.308 12.917H7.768l9.251-9.23A2.16 2.16 0 0 0 13.964.634L1.056 13.54a2.151 2.151 0 0 0 0 3.033l12.908 12.909a2.151 2.151 0 0 0 3.033-3.034l-9.229-9.23h33.54a2.15 2.15 0 1 0 0-4.302z'%3E%3C/path%3E%3C/svg%3E%3C/svg%3E");
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='43' height='30'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 30'%3E%3Cpath d='M3.123 12.917h33.54l-9.251-9.23A2.16 2.16 0 1 1 30.467.634L43.375 13.54a2.151 2.151 0 0 1 0 3.033L30.467 29.483a2.151 2.151 0 0 1-3.034-3.034l9.23-9.23H3.123a2.151 2.151 0 1 1 0-4.302z'%3E%3C/path%3E%3C/svg%3E%3C/svg%3E");
+  right: 40%;
+}
+
+.slick-arrow.slick-next.slick-disabled {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='43' height='30'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 30' fill='gray'%3E%3Cpath d='M3.123 12.917h33.54l-9.251-9.23A2.16 2.16 0 1 1 30.467.634L43.375 13.54a2.151 2.151 0 0 1 0 3.033L30.467 29.483a2.151 2.151 0 0 1-3.034-3.034l9.23-9.23H3.123a2.151 2.151 0 1 1 0-4.302z'%3E%3C/path%3E%3C/svg%3E%3C/svg%3E");
+}
+
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 
 /*# sourceMappingURL=test.css.map */
