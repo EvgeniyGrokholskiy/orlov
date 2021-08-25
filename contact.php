@@ -1,11 +1,11 @@
 <?php
 if (isset ($_POST['email'])) {
-    $to = "grokholskiy@gmail.com";
-    $from = "support@tpverstak.ru";
+    $to = "grokholskiy@gmail.com , user1505@list.ru";
+    $from = "order@gifttrend.ru";
     $subject = "Заполнена контактная форма на сайте " . $_SERVER['HTTP_REFERER'];
-    $message = "Имя пользователя: " . $_POST['first_name'] . "\nEmail пользователя " . $_POST['email'] . "\nТелефон пользователя " . $_POST['tel'] . "\nНазвание трека:" . $_POST['track_name'] . "\nИсполнитель:" . $_POST['performer_name'] . "\nДополнительный текст выбран?" . $_POST['addition_text'] . "\nДополнительный текст:" . $_POST['addition_text_input'] . "\nОживить фото (QR-код):" . $_POST['live_photo'] . "\nДобавить крепление на стену:" . $_POST['wall'] . "\nДобавить подарочную упаковку:" . $_POST['gift'] . "\nДобавить поздравительную
-                            открытку" . $_POST['congratulation'] . "\nДобавить подставку:" . $_POST['stand'] . "\nДобавить лазерную гравировку на
-                            подставку" . $_POST['laser'] . "\nСумма:" . $_POST['price'] . "\nРазмер:" . $_POST['size_of_glass']. "\nТип плеера:" . $_POST['cover'] . "\nМасштаб:" . $_POST['magnification'] . "\nПоложение по вертикали:" . $_POST['pos_y'] . "\nПоложение по горизонтали:" . $_POST['pos_x'] . "\n\nАдрес сайта: " . $_SERVER['HTTP_REFERER'];
+    $message = "\nИмя пользователя: " . $_POST['first_name'] . "\nEmail пользователя " . $_POST['email'] . "\nТелефон пользователя " . $_POST['tel'] . "\nНазвание трека: " . $_POST['track_name'] . "\nИсполнитель: " . $_POST['performer_name'] . "\nДополнительный текст выбран? " . $_POST['addition_text'] . "\nДополнительный текст: " . $_POST['addition_text_input'] . "\nОживить фото (QR-код): " . $_POST['live_photo'] . "\nДобавить крепление на стену: " . $_POST['wall'] . "\nДобавить подарочную упаковку: " . $_POST['gift'] . "\nДобавить поздравительную
+                            открытку: " . $_POST['congratulation'] . "\nДобавить подставку: " . $_POST['stand'] . "\nДобавить лазерную гравировку на
+                            подставку: " . $_POST['laser'] . "\nСумма: " . $_POST['price'] . "\nРазмер: " . $_POST['size_of_glass'] . "\nТип плеера: " . $_POST['cover'] . "\nМасштаб: " . $_POST['magnification'] . "\nПоложение по вертикали: " . $_POST['pos_y'] . "\nПоложение по горизонтали: " . $_POST['pos_x'] . "\n\nАдрес сайта: " . $_SERVER['HTTP_REFERER'];
 
     $boundary = md5(date('r', time()));
     $filesize = '';

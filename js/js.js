@@ -137,6 +137,7 @@ function scaling(id) {
         uploadedFileMiniature.style.height = magnificationRatio + '%';
         imgInCover.style.height = magnificationRatio + '%';
     }
+    document.getElementById('magnification').value = magnificationRatio;
 }
 
 let uploadedFileMiniature = document.getElementById('upload_file_miniature_img');
@@ -172,6 +173,8 @@ function moveImg(event) {
     uploadedFileMiniature.style.left = positionLeft + 'px';
     imgInCover.style.top = positionTop + 'px';
     imgInCover.style.left = positionLeft + 'px';
+    document.getElementById('pos_y').value = positionTop;
+    document.getElementById('pos_x').value = positionLeft;
 }
 
 addListenerToMoveButtons();
@@ -197,7 +200,7 @@ function priceChange() {
     } else if (size === 'large') {
         price = 3990;
     } else if (size === 'trinket') {
-        price = 490;
+        price = 990;
     }
 
     for (let i = 0; i < optionInputs.length; i++) {
@@ -245,11 +248,11 @@ function prepareToSendForm(e) {
         labelForTrackName.innerHTML = 'Название трека';
         labelForPerformerName.classList.remove('error');
         labelForPerformerName.textContent = 'Исполнитель';
-        document.getElementById('link').setAttribute('href', '')
         price.value = priceToEmail;
         sizeOfGlass.value = size;
         playerCover.value = cover;
         sendToEmail.classList.remove('hidden');
+        document.getElementById('link').setAttribute('href', '');
         console.log(price.value, sizeOfGlass.value, playerCover.value);
     } else if (userTrackNameInput.value === '') {
         labelForTrackName.classList.add('error');
