@@ -1,15 +1,25 @@
+//-----------------------------slick slider---------------------------------------
+
 $(document).ready(function () {
     $('.slider').slick({
         slidesToShow: 2,
+        slidesToScroll: 1,
         infinite: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });
-
-
-
+//-------------------------------------------------------------------------
 
 //---------------------to order animated movement-------------------------
-document.querySelector('.section_1__link').addEventListener('click',toOrder);
+document.querySelector('.section_1__link').addEventListener('click', toOrder);
 
 function toOrder() {
 
@@ -27,7 +37,7 @@ function sizeSelect(button) {
     sessionStorage.setItem('size', sizeOfGift);
 
     for (let i = 0; i < sizeButtons.length; i++) {
-        if (sizeOfGift === sizeButtons[i].dataset.number){
+        if (sizeOfGift === sizeButtons[i].dataset.number) {
             sizeButtons[i].classList.add('selected');
             sizeSelectLink.classList.remove('error');
         } else {
@@ -53,11 +63,11 @@ function coverSelect(selectCover) {
     sessionStorage.setItem('cover', cover);
 
     for (let i = 0; i < coverSelectButtons.length; i++) {
-        if(cover === coverSelectButtons[i].dataset.cover){
+        if (cover === coverSelectButtons[i].dataset.cover) {
             coverSample.src = coverSelectButtons[i].dataset.src;
             coverSelectButtons[i].classList.add('selected');
             coverSelectLink.classList.remove('error');
-        }else {
+        } else {
             coverSelectButtons[i].classList.remove('selected');
         }
     }
@@ -75,14 +85,14 @@ function toNextPage() {
     let sizeSelectLink = document.getElementById('size_select');
     let coverSelectLink = document.getElementById('cover_select');
 
-    if (sizeOfGift !== ''&& cover !== '') {
-        continueButton.setAttribute('href','order.html');
-    }else if (sizeOfGift === '') {
+    if (sizeOfGift !== '' && cover !== '') {
+        continueButton.setAttribute('href', 'order.html');
+    } else if (sizeOfGift === '') {
         sizeSelectLink.classList.add('error');
-        continueButton.setAttribute('href','#size_select');
-    }else if (cover === ''){
+        continueButton.setAttribute('href', '#size_select');
+    } else if (cover === '') {
         coverSelectLink.classList.add('error');
-        continueButton.setAttribute('href','#cover_select');
+        continueButton.setAttribute('href', '#cover_select');
     }
 }
 
