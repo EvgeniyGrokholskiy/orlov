@@ -293,6 +293,26 @@ html, body {
       }
     }
 
+    .slider__item {
+      position: relative;
+    }
+
+    .new {
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2px;
+        right: -5px;
+        background-image: url("../img/new_tag.svg");
+        background-repeat: no-repeat;
+        height: 65px;
+        width: 65px;
+        z-index: 1;
+      }
+    }
+
     /* Слайд активный (показывается) */
     .slick-slide.slick-active {
     }
