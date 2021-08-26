@@ -583,6 +583,15 @@ html, body {
   max-width: 280px;
   width: 100%;
 }
+.wrapper .cover_select__buttons .cover_select__text {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  color: #323260;
+}
 .wrapper .cover_select__buttons .cover_select__apple {
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M31.3 40H8.7A8.6 8.6 0 010 31.3V8.7A8.6 8.6 0 018.7 0h22.6A8.6 8.6 0 0140 8.7v22.6a8.6 8.6 0 01-8.7 8.7z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M29.3 24.2v1.1c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9H25a3.2 3.2 0 01-2.7-1.1 3 3 0 01-.4-3 3 3 0 012.1-1.9l2.5-.7a1.4 1.4 0 001.1-1.4V13.4a.5.5 0 00-.2-.5.6.6 0 00-.4 0L16.3 15a.8.8 0 00-.7.8V28c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9h-.6a3.2 3.2 0 01-2.6-1.1 3 3 0 01-.5-3 3 3 0 012.2-2l2.5-.6a1.4 1.4 0 001-1.4V10a1.2 1.2 0 011-1.2l13.4-2.5c.3 0 .5 0 .7.2a.8.8 0 01.3.6v17z' fill='%23BB58BB'/%3E%3Cpath d='M29.3 24.2v1.1c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9H25a3.2 3.2 0 01-2.7-1.1 3 3 0 01-.4-3 3 3 0 012.1-1.9l2.5-.7a1.4 1.4 0 001.1-1.4V13.4a.5.5 0 00-.2-.5.6.6 0 00-.4 0L16.3 15a.8.8 0 00-.7.8V28c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9h-.6a3.2 3.2 0 01-2.6-1.1 3 3 0 01-.5-3 3 3 0 012.2-2l2.5-.6a1.4 1.4 0 001-1.4V10a1.2 1.2 0 011-1.2l13.4-2.5c.3 0 .5 0 .7.2a.8.8 0 01.3.6v17z' fill='url(%23paint1_radial)'/%3E%3Cpath d='M29.3 24.2v1.1c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9H25a3.2 3.2 0 01-2.7-1.1 3 3 0 01-.4-3 3 3 0 012.1-1.9l2.5-.7a1.4 1.4 0 001.1-1.4V13.4a.5.5 0 00-.2-.5.6.6 0 00-.4 0L16.3 15a.8.8 0 00-.7.8V28c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9h-.6a3.2 3.2 0 01-2.6-1.1 3 3 0 01-.5-3 3 3 0 012.2-2l2.5-.6a1.4 1.4 0 001-1.4V10a1.2 1.2 0 011-1.2l13.4-2.5c.3 0 .5 0 .7.2a.8.8 0 01.3.6v17z' fill='url(%23paint2_radial)'/%3E%3Cpath d='M29.3 24.2v1.1c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9H25a3.2 3.2 0 01-2.7-1.1 3 3 0 01-.4-3 3 3 0 012.1-1.9l2.5-.7a1.4 1.4 0 001.1-1.4V13.4a.5.5 0 00-.2-.5.6.6 0 00-.4 0L16.3 15a.8.8 0 00-.7.8V28c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9h-.6a3.2 3.2 0 01-2.6-1.1 3 3 0 01-.5-3 3 3 0 012.2-2l2.5-.6a1.4 1.4 0 001-1.4V10a1.2 1.2 0 011-1.2l13.4-2.5c.3 0 .5 0 .7.2a.8.8 0 01.3.6v17z' fill='url(%23paint3_linear)'/%3E%3Cpath d='M29.3 24.2v1.1c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9H25a3.2 3.2 0 01-2.7-1.1 3 3 0 01-.4-3 3 3 0 012.1-1.9l2.5-.7a1.4 1.4 0 001.1-1.4V13.4a.5.5 0 00-.2-.5.6.6 0 00-.4 0L16.3 15a.8.8 0 00-.7.8V28c0 .8 0 1.5-.2 2.3a2.8 2.8 0 01-1.2 1.8c-.7.5-1.5.8-2.3.9h-.6a3.2 3.2 0 01-2.6-1.1 3 3 0 01-.5-3 3 3 0 012.2-2l2.5-.6a1.4 1.4 0 001-1.4V10a1.2 1.2 0 011-1.2l13.4-2.5c.3 0 .5 0 .7.2a.8.8 0 01.3.6v17z' fill='%23fff'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint1_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='rotate(90 -8.8 21.3) scale(16.871)'%3E%3Cstop stop-color='%237470F9'/%3E%3Cstop offset='1' stop-color='%237A70FE' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='paint2_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='rotate(-105.5 23 3.3) scale(13.618)'%3E%3Cstop stop-color='%234CA3F8'/%3E%3Cstop offset='.4' stop-color='%234CA4F7'/%3E%3Cstop offset='1' stop-color='%234AA2F9' stop-opacity='0'/%3E%3C/radialGradient%3E%3ClinearGradient id='paint0_linear' x1='20' y1='40' x2='20' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FD355A'/%3E%3Cstop offset='1' stop-color='%23FD5163'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='16.1' y1='11.5' x2='22' y2='22.1' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF6380'/%3E%3Cstop offset='1' stop-color='%23F65E79' stop-opacity='0'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-position: 15px center;
@@ -700,8 +709,14 @@ html, body {
 }
 
 .footer__nav_link {
-  text-decoration: none;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .footer__contact_info {

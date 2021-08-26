@@ -200,7 +200,7 @@ function priceChange() {
     } else if (size === 'large') {
         price = 3990;
     } else if (size === 'trinket') {
-        price = 990;
+        price = 490;
     }
 
     for (let i = 0; i < optionInputs.length; i++) {
