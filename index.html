@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <title>Подарки любимым.</title>
 </head>
@@ -12,12 +15,12 @@
     <header>
         <div class="header__container">
             <div class="header__logo">
-                <img src="img/logo.jpg" alt="Логотип компании" class="logo" height="80" width="80">
-                <h1 class="header__h1">Подарок для любимых</h1>
+                <img src="img/logo.png" alt="Логотип компании" class="logo" height="80" width="80">
+                <h1 class="header__h1">Подарки для самых близких и любимых</h1>
             </div>
             <div class="header__nav">
                 <p class="header__text">Другие подарки</p>
-                <div class="hamburger" tabindex="1">
+                <div class="hamburger">
                     <svg width="34" height="19" viewBox="0 0 34 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M0 0H34V3H0V0ZM0 8H34V11H0V8ZM34 16H0V19H34V16Z" fill="#323260"/>
@@ -31,16 +34,15 @@
             <div class="section_1">
                 <div class="section_1__info">
                     <p class="text">
-                        Один из лучших подарков - любимый трек на органическом стекле с обложки альбома любого
-                        исполнителя, которого вы выберете или с выбранной Вами фотографией. А если добавить немного
-                        волшебства и современных технологий то получится почти живое напоминание...
+                        Тренд 2021 года -  трек-пластинка на органическом стекле с вашей фотографией и любимой песней, которая вызывает у вас мурашки по телу.
+                        С помощью  трек-пластинки можно воспроизвести на смартфоне ту самую любимую песню, наведя камеру телефона на специальный spotify-код
                     </p>
                     <div class="section_1__order_buttons">
-                        <button class="section_1__order_button" tabindex="-1"><a class="section_1__link" href="#order"
-                                                                                 tabindex="4">Заказать</a>
+                        <button class="section_1__order_button shadow" tabindex="-1"><a class="section_1__link" href="#order"
+                                                                                 >Заказать</a>
                         </button>
                         <a class="did_not_work_link" href="https://www.instagram.com/trend_gifts74/" target="_blank" referrerpolicy="origin">
-                            <button class="did_not_work__instagram" tabindex="-1"></button>
+                            <button class="did_not_work__instagram shadow shadow-round" tabindex="-1"></button>
                         </a>
                     </div>
                     <div class="section_1__header">
@@ -66,7 +68,10 @@
             <div class="banner">
                 <div class="banner__size" id="order">
                     <h3 class="banner__size_header">Размер</h3>
-                    <p class="banner__size_text">100×150мм, 200×300мм, 300*400мм или брелок 55×85 мм</p>
+                    <p class="banner__size_text">А5 - 148×210мм,<br>
+                        А4 - 210×297мм,<br>
+                        А3 - 300×400мм,<br>
+                        или брелок 50×65 мм</p>
                 </div>
                 <div class="banner__price">
                     <h3 class="banner__price_header">Стоимость</h3>
@@ -79,35 +84,35 @@
                 </div>
                 <div class="size_select__buttons">
                     <div class="size_select-top_tag"></div>
-                    <div class="size_select__small size_select__button" tabindex="5" data-number="small"
+                    <div class="size_select__small size_select__button shadow shadow-no_shadow" tabindex="5" data-number="small"
                          onclick="sizeSelect(this.dataset.number)">
                         <div class="size_select__name">
-                            <p class="size_select__text">Малый</p>
-                            <p class="size_select__text">150.0*210.0 мм, толщина 2-3 мм</p>
+                            <p class="size_select__text">А5</p>
+                            <p class="size_select__text">148.0×210.0 мм, толщина 3 мм</p>
                         </div>
                         <p class="size_select__price">990<span class="size_select__price_tag"> &#x20bd</span></p>
                     </div>
-                    <div class="size_select__medium size_select__button" tabindex="6" data-number="medium"
+                    <div class="size_select__medium size_select__button shadow shadow-no_shadow" tabindex="6" data-number="medium"
                          onclick="sizeSelect(this.dataset.number)">
                         <div class="size_select__name">
-                            <p class="size_select__text">Средний</p>
-                            <p class="size_select__text">200.0*300.0 мм, толщина 2-3 мм</p>
+                            <p class="size_select__text">А4</p>
+                            <p class="size_select__text">210.0×297.0 мм, толщина 3 мм</p>
                         </div>
                         <p class="size_select__price">1490<span class="size_select__price_tag"> &#8381</span></p>
                     </div>
-                    <div class="size_select__large size_select__button" tabindex="7" data-number="large"
+                    <div class="size_select__large size_select__button shadow shadow-no_shadow" tabindex="7" data-number="large"
                          onclick="sizeSelect(this.dataset.number)">
                         <div class="size_select__name">
-                            <p class="size_select__text">Большой</p>
-                            <p class="size_select__text">300.0*400.0 мм, толщина 2-3 мм</p>
+                            <p class="size_select__text">А3</p>
+                            <p class="size_select__text">300.0×400.0 мм, толщина 3 мм</p>
                         </div>
                         <p class="size_select__price">3990<span class="size_select__price_tag"> &#8381</span></p>
                     </div>
-                    <div class="size_select__trinket size_select__button" tabindex="8" data-number="trinket"
+                    <div class="size_select__trinket size_select__button shadow shadow-no_shadow" tabindex="8" data-number="trinket"
                          onclick="sizeSelect(this.dataset.number)">
                         <div class="size_select__name">
                             <p class="size_select__text">Брелок с колечком</p>
-                            <p class="size_select__text">55*85 мм, толщина 2-3 мм</p>
+                            <p class="size_select__text">50,0×65,0 мм, толщина 3 мм</p>
                         </div>
                         <p class="size_select__price">490<span class="size_select__price_tag"> &#8381</span></p>
                     </div>
@@ -122,15 +127,15 @@
                         <h2 id="cover_select" class="cover_select__header_text">Выберите макет</h2>
                     </div>
                     <div class="cover_select__buttons">
-                        <div class="cover_select__apple cover_select__button" tabindex="9" data-src="img/apple.jpg"
+                        <div class="cover_select__apple cover_select__button shadow shadow-no_shadow" tabindex="9" data-src="img/apple.jpg"
                              data-cover="apple" onclick="coverSelect(this.dataset.cover)">
                             <p class="cover_select__text">Apple Music</p>
                         </div>
-                        <div class="cover_select__spotify cover_select__button" tabindex="10" data-src="img/spotify.jpg"
+                        <div class="cover_select__spotify cover_select__button shadow shadow-no_shadow" tabindex="10" data-src="img/spotify.jpg"
                              data-cover="spotify" onclick="coverSelect(this.dataset.cover)">
                             <p class="cover_select__text">Spotify</p>
                         </div>
-                        <div class="cover_select__vk_music cover_select__button" tabindex="11" data-src="img/vk.jpg"
+                        <div class="cover_select__vk_music cover_select__button shadow shadow-no_shadow" tabindex="11" data-src="img/vk.jpg"
                              data-cover="vkMusic" onclick="coverSelect(this.dataset.cover)">
                             <p class="cover_select__text">Музыка VK</p>
                         </div>
@@ -143,14 +148,14 @@
             </div>
             <hr class="separator">
             <a class="continue__link" href="">
-                <button class="continue" tabindex="-1">Продолжить</button>
+                <button class="continue shadow" tabindex="12">Продолжить</button>
             </a>
         </section>
     </main>
     <footer>
         <div class="footer">
             <div class="footer__logo">
-                <img src="img/logo_orange_bg.jpg" alt="Логотип компании" class="logo" height="80" width="80">
+                <img src="img/logo.png" alt="Логотип компании" class="logo" height="80" width="80">
             </div>
             <div class="footer__nav">
                 <ul class="footer_ul">
@@ -171,8 +176,7 @@
         </div>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/home_page_js.js"></script>
 

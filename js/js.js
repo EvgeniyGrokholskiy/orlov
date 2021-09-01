@@ -214,7 +214,7 @@ function priceChange() {
     for (let i = 0; i < optionPriceArray.length; i++) {
         optionPrice += +optionPriceArray[i];
     }
-    showPrice.textContent = +price + +optionPrice;//price on page
+    showPrice.textContent = (+price + +optionPrice).toString();//price on page
     showPriceMobile.textContent = 'Итого: ' + (+price + +optionPrice) + ' р.';
     priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
 }

@@ -1,4 +1,5 @@
 $black_text: #000000;
+$blue_text: #323260;
 $button_enabled: black;
 $button_disabled: gray;
 $dark_green: #326034;
@@ -54,6 +55,10 @@ html, body {
         margin-left: 25px;
         @include font(20px);
         color: $black_text;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -64,26 +69,28 @@ html, body {
     }
 
     .header__h1 {
-      @include font(24px, 1.46em);
-      color: #323260;
+      font-family: 'Pattaya', sans-serif;
+      font-size: 33px;
+      font-weight: 500;
+      color: $orange;
       margin-left: 26px;
     }
 
-    .header__text {
-      @include font(16px, 1.5em);
-      color: #323260;
-    }
-
     .header__nav {
+      display: none;
       background-color: $gray;
       border-radius: 10px;
-      display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 1% 0 2%;
       height: 75px;
       max-width: 227px;
       width: 29%;
+    }
+
+    .header__text {
+      @include font(16px);
+      color: $blue_text;
 
       .hamburger {
         cursor: pointer;
@@ -175,7 +182,7 @@ html, body {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
-        width: 93%;
+        width: 79%;
       }
 
       .section_1__order_button {
@@ -188,9 +195,8 @@ html, body {
         height: 50px;
 
         .section_1__link {
-          @include font(20px, 1.45em);
+          @include font(20px, 50px);
           display: block;
-          line-height: 50px;
           color: $white_text;
           text-decoration: none;
           max-width: 123px;
@@ -202,9 +208,11 @@ html, body {
         background-color: white;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none'%3E%3Cpath fill='url(%23paint0_radial)' d='M25 50a25 25 0 100-50 25 25 0 000 50z'/%3E%3Cpath fill='%23FEFEFE' d='M19.75 13.8a6.58 6.58 0 00-6.57 6.57v9.26a6.58 6.58 0 006.57 6.57h10.5a6.58 6.58 0 006.57-6.57v-9.26a6.58 6.58 0 00-6.57-6.57h-10.5zm10.5 24.28h-10.5a8.46 8.46 0 01-8.45-8.45v-9.26c0-4.66 3.8-8.45 8.45-8.45h10.5c4.66 0 8.45 3.8 8.45 8.45v9.26c0 4.65-3.8 8.45-8.45 8.45z'/%3E%3Cpath fill='%23FEFEFE' d='M25 19.36a5.65 5.65 0 10.01 11.3 5.65 5.65 0 00-.01-11.3zm0 13.16a7.53 7.53 0 11.02-15.06A7.53 7.53 0 0125 32.52zM33.97 17.7a1.56 1.56 0 11-3.12 0 1.56 1.56 0 013.12 0z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientTransform='rotate(-44.19 57.16 21.77) scale(71.1041)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FAEA1C'/%3E%3Cstop offset='.45' stop-color='%23E62874'/%3E%3Cstop offset='1' stop-color='%2345519D'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
         background-repeat: no-repeat;
+        background-size: contain;
         border: none;
-        height: 50px;
-        width: 50px;
+        border-radius: 50%;
+        height: 71px;
+        width: 71px;
       }
 
       .section_1__header {
@@ -560,14 +568,14 @@ html, body {
         background-image: url("data:image/svg+xml,%3Csvg width='50' height='75' viewBox='0 0 50 75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10C0 4.47715 4.47715 0 10 0H50V75H10C4.47715 75 0 70.5228 0 65V10Z' fill='%233E81FB'/%3E%3Cpath d='M1.15 35.7V34.5H9.775V35.7H6.1V45H4.825V35.7H1.15ZM11.5229 39.75C11.5229 40.94 11.9079 41.94 12.6779 42.75C13.4479 43.55 14.3979 43.95 15.5279 43.95C16.7079 43.95 17.6679 43.55 18.4079 42.75C19.1579 41.95 19.5329 40.95 19.5329 39.75C19.5329 38.54 19.1479 37.54 18.3779 36.75C17.6079 35.95 16.6579 35.55 15.5279 35.55C14.3779 35.55 13.4229 35.945 12.6629 36.735C11.9029 37.525 11.5229 38.53 11.5229 39.75ZM10.1729 39.75C10.1729 38.22 10.6779 36.94 11.6879 35.91C12.6979 34.87 13.9779 34.35 15.5279 34.35C17.0679 34.35 18.3429 34.855 19.3529 35.865C20.3729 36.875 20.8829 38.17 20.8829 39.75C20.8829 41.3 20.3729 42.59 19.3529 43.62C18.3329 44.64 17.0579 45.15 15.5279 45.15C13.9879 45.15 12.7079 44.645 11.6879 43.635C10.6779 42.625 10.1729 41.33 10.1729 39.75ZM30.1896 45V35.7H24.4896V45H23.2146V34.5H31.4646V45H30.1896ZM34.5211 44.19C34.5211 43.98 34.6011 43.795 34.7611 43.635C34.9211 43.475 35.1311 43.395 35.3911 43.395C35.6111 43.395 35.7961 43.48 35.9461 43.65C36.1061 43.81 36.1861 43.99 36.1861 44.19C36.1861 44.42 36.1111 44.62 35.9611 44.79C35.8111 44.96 35.6211 45.045 35.3911 45.045C35.1311 45.045 34.9211 44.96 34.7611 44.79C34.6011 44.62 34.5211 44.42 34.5211 44.19ZM34.7161 41.775V34.5H35.9911V41.775H34.7161Z' fill='white'/%3E%3C/svg%3E%0A");
         display: block;
         position: absolute;
-        top: 0;
+        top: 85px;
         left: -40px;
         height: 75px;
         width: 50px;
         z-index: -1;
       }
 
-      .size_select__small, .size_select__medium, .size_select__large, .size_select__trinket {
+      .size_select__button {
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -578,6 +586,10 @@ html, body {
         padding: 0 2%;
         max-width: 580px;
         width: 100%;
+
+        &:hover {
+          border: 2px solid $light_blue;
+        }
 
         .size_select__text {
           margin: 0;
@@ -676,7 +688,7 @@ html, body {
     margin-left: 17%;
     width: 100%;
 
-    .cover_select__apple, .cover_select__spotify, .cover_select__vk_music {
+    .cover_select__button {
       display: flex;
       align-items: center;
       background-color: $gray;
@@ -685,6 +697,10 @@ html, body {
       height: 70px;
       max-width: 280px;
       width: 100%;
+
+      &:hover {
+        border: 2px solid $light_blue;
+      }
     }
 
     .cover_select__text {
@@ -757,13 +773,16 @@ html, body {
   }
 
   .continue__link {
+    display: block;
     text-decoration: none;
+    margin: 0 auto;
     max-width: 180px;
     width: 100%;
 
     .continue {
       @include font(20px);
       color: $white_text;
+      cursor: pointer;
       display: block;
       background: $light_blue;
       border: none;
@@ -776,13 +795,33 @@ html, body {
   }
 }
 
+.shadow {
+  box-shadow: 4px 4px 9px gray;
+
+  &-round {
+    border-radius: 50%;
+  }
+
+  &-no_shadow {
+    box-shadow: none;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  &:active {
+    transform: scale(0.99);
+    box-shadow: 3px 3px 3px gray;
+  }
+}
 
 .footer {
   display: flex;
   align-items: center;
   background-color: $orange;
   padding: 5% 3%;
-  //height: 189px;
   color: $white_text;
   max-width: 1200px;
   width: 100%;
@@ -822,6 +861,10 @@ html, body {
   @include font(16px);
   color: $white_text;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer__contact_info {

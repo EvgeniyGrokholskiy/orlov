@@ -48,6 +48,7 @@ function sizeSelect(button) {
 
 let sizeButtons = document.querySelectorAll('.size_select__button');
 let sizeOfGift = 'small';
+
 sizeSelect('small');
 
 //-------------------------------------------------------------------------

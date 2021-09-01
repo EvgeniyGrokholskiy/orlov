@@ -42,7 +42,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 2px;
+  margin: 0 5px;
 }
 .wrapper .order_constructor .order_constructor__sample .order_construction__background_image .tuning_buttons .increase, .wrapper .order_constructor .order_constructor__sample .order_construction__background_image .tuning_buttons .reduction {
   font-family: Roboto-Regular, sans-serif;
@@ -73,7 +73,7 @@ html, body {
   border: none;
   border-radius: 5px;
   height: 21px;
-  margin: 0 2px;
+  margin: 0 5px;
 }
 .wrapper .order_constructor .order_constructor__sample .order_construction__background_image .order_construction__user_img {
   display: flex;

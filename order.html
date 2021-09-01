@@ -45,7 +45,7 @@
                     <div class="order_constructor__image">
                         <div class="order_construction__background_image">
                             <div class="tuning_buttons">
-                                <button id="increase" class="increase tuning_buttons__item" onclick="scaling(this.id)">
+                                <button id="increase" class="increase tuning_buttons__item shadow" onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg" width="15"
                                          height="15" viewBox="0 0 1267.000000 1280.000000"
                                          preserveAspectRatio="xMidYMid meet">
@@ -55,7 +55,7 @@
                                         </g>
                                     </svg>
                                 </button>
-                                <button id="reduction" class="reduction tuning_buttons__item"
+                                <button id="reduction" class="reduction tuning_buttons__item shadow"
                                         onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg"
                                          height="15px" viewBox="0 0 24 24"
@@ -63,15 +63,15 @@
                                         <path d="M18,11H6c-1.104,0-2,0.896-2,2s0.896,2,2,2h12c1.104,0,2-0.896,2-2S19.104,11,18,11z"/>
                                     </svg>
                                 </button>
-                                <button id="left" class="move_button ">влево</button>
-                                <button id="right" class="move_button ">вправо</button>
-                                <button id="up" class="move_button ">вверх</button>
-                                <button id="down" class="move_button ">вниз</button>
+                                <button id="left" class="move_button shadow">влево</button>
+                                <button id="right" class="move_button shadow">вправо</button>
+                                <button id="up" class="move_button shadow">вверх</button>
+                                <button id="down" class="move_button shadow">вниз</button>
                             </div>
                             <img id="player_theme" class="player_theme" src="img/apple_w_o_text.jpg" alt="Тема плейера"
                                  width="280" height="379">
                             <div class="order_construction__user_img">
-                                <img id="user_image" src="" alt="">
+                                <img id="user_image" src="img/apple_w_o_text.jpg" alt="">
                             </div>
                             <div class="order_construction__user_text">
                                 <span id="track_name_span" class="user_text user_text-track">Название трека</span>
@@ -87,10 +87,10 @@
                         </p>
                         <div class="did_not_work__socials">
                             <a class="did_not_work_link" href="https://wa.me/+79080405921" target="_blank" referrerpolicy="origin">
-                                <button class="did_not_work__whatsapp" tabindex="-1"></button>
+                                <button class="did_not_work__whatsapp shadow shadow-round" tabindex="-1"></button>
                             </a>
                             <a class="did_not_work_link" href="https://www.instagram.com/trend_gifts74" target="_blank" referrerpolicy="origin">
-                                <button class="did_not_work__instagram" tabindex="-1"></button>
+                                <button class="did_not_work__instagram shadow shadow-round" tabindex="-1"></button>
                             </a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                         <label class="label_text" id="input_for_performer_name" for="performer_name">Исполнитель</label>
                         <input class="gray_input" id="performer_name" name="performer_name" type="text"
                                placeholder="Исполнитель">
-                        <label class="label_text upload_file" for="upload_file">Загрузить обложку</label>
+                        <label class="label_text upload_file shadow" for="upload_file">Загрузить обложку</label>
                         <input id="upload_file" class="hide_upload_file" name="upload_file" type="file"
                                onchange="readFile(this)">
 
@@ -201,7 +201,7 @@
                     </form>
                     <span class="price_for_mobile"></span>
                     <a href="" id="link">
-                        <button class="checkout" id="button" type="button">Оформить заказ</button>
+                        <button class="checkout shadow" id="button" type="button">Оформить заказ</button>
                     </a>
 
                     <div class="did_not_work did_not_work-for_mobile">
@@ -251,8 +251,8 @@
     </footer>
 </div>
 
-<script src="js/js.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/js.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
