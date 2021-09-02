@@ -243,7 +243,9 @@ function prepareToSendForm(e) {
 
 
     if (userTrackNameInput.value !== '' && userPerformerNameInput.value !== '') {
+
         e.preventDefault()
+
         labelForTrackName.classList.remove('error');
         labelForTrackName.innerHTML = 'Название трека';
         labelForPerformerName.classList.remove('error');
@@ -251,21 +253,43 @@ function prepareToSendForm(e) {
         price.value = priceToEmail;
         sizeOfGlass.value = size;
         playerCover.value = cover;
+
         sendToEmail.classList.remove('hidden');
-        document.getElementById('link').setAttribute('href', '');
-        console.log(price.value, sizeOfGlass.value, playerCover.value);
+        //document.getElementById('link').setAttribute('href', '');
+        //console.log(price.value, sizeOfGlass.value, playerCover.value);
+
     } else if (userTrackNameInput.value === '') {
+
+        e.preventDefault()
+
         labelForTrackName.classList.add('error');
         labelForTrackName.textContent = 'Ведите название трека';
-        button.setAttribute('href', '#h123');
+
+        //button.setAttribute('href', '#h123');
+        scrollToAnchor('#h123');
+
     } else if (userPerformerNameInput.value === '') {
+
+        e.preventDefault()
+
         labelForTrackName.classList.remove('error');
         labelForTrackName.textContent = 'Название трека';
         labelForPerformerName.classList.add('error');
         labelForPerformerName.textContent = 'Укажите имя исполнителя';
-        button.setAttribute('href', '#h123');
+
+        //button.setAttribute('href', '#h123');
+
+        scrollToAnchor('#h123');
+    }
+
+    function scrollToAnchor(href) {
+
+        let top = document.querySelector(href).offsetTop;
+        $('body,html').animate({scrollTop: top}, 1000);
+
     }
 }
+
 
 function closeForm() {
     let sendToEmail = document.querySelector('.form_to_email_container');

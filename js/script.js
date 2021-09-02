@@ -9,6 +9,7 @@ $(function() {
         alert(http.responseText);
         if (http.responseText.indexOf(f.first_name.value) == 0) { // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
           th.trigger("reset");
+          document.location.href = "index.html";
         }
       }
     }

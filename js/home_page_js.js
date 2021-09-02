@@ -1,6 +1,6 @@
 //-----------------------------slick slider---------------------------------------
 
-$(document).ready(function () {
+$(function () {
     $('.slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -19,11 +19,11 @@ $(document).ready(function () {
 //-------------------------------------------------------------------------
 
 //---------------------to order animated movement-------------------------
-document.querySelector('.section_1__link').addEventListener('click', toOrder);
+document.querySelector('.section_1__link').addEventListener('click', scrollToOrder);
 
-function toOrder() {
+function scrollToOrder(event) {
 
-    let top = document.querySelector('#order').offsetTop;
+    let top = document.querySelector(event.currentTarget.dataset.href).offsetTop;
     $('body,html').animate({scrollTop: top}, 1000);
 
 }
@@ -47,9 +47,9 @@ function sizeSelect(button) {
 }
 
 let sizeButtons = document.querySelectorAll('.size_select__button');
-let sizeOfGift = 'small';
+let sizeOfGift = '';
 
-sizeSelect('small');
+// sizeSelect('small');
 
 //-------------------------------------------------------------------------
 
@@ -75,9 +75,9 @@ function coverSelect(selectCover) {
 }
 
 let coverSelectButtons = document.querySelectorAll('.cover_select__button');
-let cover = 'apple';
+let cover = '';
 
-coverSelect('apple');
+// coverSelect('apple');
 
 //------------------------validation size and skin select------------------------
 
@@ -90,11 +90,18 @@ function toNextPage() {
         continueButton.setAttribute('href', 'order.html');
     } else if (sizeOfGift === '') {
         sizeSelectLink.classList.add('error');
-        continueButton.setAttribute('href', '#size_select');
+        scrollToAnchor('.size_select');
     } else if (cover === '') {
         coverSelectLink.classList.add('error');
-        continueButton.setAttribute('href', '#cover_select');
+        scrollToAnchor('.cover_select');
     }
+}
+
+function scrollToAnchor(href) {
+
+    let top = document.querySelector(href).offsetTop;
+    $('body,html').animate({scrollTop: top}, 1000);
+
 }
 
 let continueButton = document.querySelector('.continue__link');
