@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/order_view.css">
+
+
+    <title>Заказ</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="img/logo.jpg" alt="Логотип компании" class="logo" height="80" width="80">
+                <a class="header__link" href="index.html" tabindex="2">
+                    <span class="header__back_link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                             height="14" fill="none"><g clip-path="url(#clip0)"><path
+                                fill="#000"
+                                d="M19 6H3.41l4.3-4.29A1 1 0 106.29.3l-6 6a1 1 0 000 1.41l6 6a1 1 0 001.41-1.4L3.41 8H19a1 1 0 000-2z"/></g><defs><clipPath
+                                id="clip0"><path fill="#fff" d="M0 0h20v14H0z"/></clipPath></defs>
+                        </svg>
+                        Назад
+                    </span>
+                </a>
+            </div>
+            <div class="header__nav">
+                <div class="hamburger" tabindex="1">
+                    <svg width="34" height="19" viewBox="0 0 34 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0 0H34V3H0V0ZM0 8H34V11H0V8ZM34 16H0V19H34V16Z" fill="#323260"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="order_constructor">
+            <aside>
+                <div class="order_constructor__sample">
+                    <div class="order_constructor__image">
+                        <div class="order_construction__background_image">
+                            <div class="tuning_buttons" style="display: none">
+                                <button id="increase" class="increase tuning_buttons__item shadow"
+                                        onclick="scaling(this.id)">
+                                    <svg class="sign" xmlns="http://www.w3.org/2000/svg" width="15"
+                                         height="15" viewBox="0 0 1267.000000 1280.000000"
+                                         preserveAspectRatio="xMidYMid meet">
+                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                           stroke="none">
+                                            <path d="M6150 12794 c-195 -19 -398 -76 -550 -155 -338 -176 -592 -520 -691 -938 -54 -226 -52 -157 -56 -2058 l-4 -1763 -1712 0 c-1854 0 -1839 0 -2071 -54 -403 -96 -739 -346 -906 -676 -114 -227 -170 -514 -157 -817 17 -398 156 -724 421 -989 200 -199 415 -319 695 -385 204 -49 183 -49 2013 -49 l1717 0 4 -1762 c4 -1902 2 -1833 56 -2059 100 -421 345 -751 688 -927 124 -64 249 -105 402 -134 168 -32 494 -32 663 0 300 56 514 167 713 366 234 236 365 511 421 886 16 105 18 270 21 1873 l4 1757 1717 0 c1888 0 1849 -1 2091 61 400 103 715 350 886 698 151 305 196 741 115 1126 -83 402 -328 720 -697 907 -120 62 -190 87 -332 123 -218 55 -211 55 -2068 55 l-1712 0 -4 1763 c-3 1564 -5 1774 -20 1869 -59 391 -203 678 -463 928 -184 177 -393 280 -669 331 -108 20 -406 33 -515 23z"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button id="reduction" class="reduction tuning_buttons__item shadow"
+                                        onclick="scaling(this.id)">
+                                    <svg class="sign" xmlns="http://www.w3.org/2000/svg"
+                                         height="15px" viewBox="0 0 24 24"
+                                         width="15px">
+                                        <path d="M18,11H6c-1.104,0-2,0.896-2,2s0.896,2,2,2h12c1.104,0,2-0.896,2-2S19.104,11,18,11z"/>
+                                    </svg>
+                                </button>
+                                <button id="left" class="move_button shadow">влево</button>
+                                <button id="right" class="move_button shadow">вправо</button>
+                                <button id="up" class="move_button shadow">вверх</button>
+                                <button id="down" class="move_button shadow">вниз</button>
+                            </div>
+                            <img id="player_theme" class="player_theme" src="img/apple_w_o_text.jpg" alt="Тема плейера"
+                                 width="280" height="379">
+                            <div class="order_construction__user_img">
+                                <img id="user_image" src="" alt="">
+                            </div>
+                            <div class="order_construction__user_text">
+                                <span id="track_name_span" class="user_text user_text-track">Название трека</span>
+                                <span id="performer_name_span" class="user_text user_text-performer">Исполнитель</span>
+                                <span id="lower_text_span" class="user_text user_text-lower"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="did_not_work">
+                        <p class="did_not_work__text">
+                            Не получилось загрузить фото или есть другие вопросы или проблемы?
+                            Переходите в мессенджер, подскажем
+                        </p>
+                        <div class="did_not_work__socials">
+                            <a class="did_not_work_link" href="https://wa.me/+79080405921" target="_blank"
+                               referrerpolicy="origin">
+                                <button class="did_not_work__whatsapp shadow shadow-round" tabindex="-1"></button>
+                            </a>
+                            <a class="did_not_work_link" href="https://www.instagram.com/trend_gifts74" target="_blank"
+                               referrerpolicy="origin">
+                                <button class="did_not_work__instagram shadow shadow-round" tabindex="-1"></button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order_preview__price">
+
+                    </div>
+                </div>
+            </aside>
+            <section>
+                <div class="order_constructor__main" id="h123">
+                    <form id="ajax-contact-form" name="order_glass" class="order_constructor__form"
+                          enctype="multipart/form-data">
+                        <label class="label_text" id="input_for_track_name" for="track_name">Название трека</label>
+                        <input class="gray_input" id="track_name" name="track_name" type="text" placeholder="Трек">
+                        <label class="label_text" id="input_for_performer_name" for="performer_name">Исполнитель</label>
+                        <input class="gray_input" id="performer_name" name="performer_name" type="text"
+                               placeholder="Исполнитель">
+                        <label class="label_text upload_file shadow" for="upload_file">Загрузить обложку</label>
+                        <input id="upload_file" class="hide_upload_file" name="upload_file" type="file"
+                               onchange="readFile(this)">
+
+                        <div class="order_constructor__file_miniature">
+                            <img id="upload_file_miniature_img" class="uploaded_file_miniature_img" src="" alt="">
+                        </div>
+
+                        <label class="label_text" for="addition_text">Дополнительный текст
+                            <input class="checkbox_to_hide" id="addition_text" name="addition_text" type="checkbox"
+                                   data-price="100"
+                                   onchange="onOffLowerText()">
+                            <span class="checkbox"></span>
+                            <span class="addition_price">+100 р.</span>
+                            <input disabled class="gray_input gray_input-other_size " id="addition_text_input"
+                                   name="addition_text_input" type="text"
+                                   placeholder="Текст">
+                        </label>
+
+                        <div class="view_data">
+                            <label>Введите позицию по горизонтали <input type="number" class="pos-x"
+                                                                        oninput="manualPositionSet(this)"></label>
+                            <label>Введите позицию по вертикали <input type="number" class="pos-y"
+                                                                      oninput="manualPositionSet(this)"></label>
+                            <label>Введите масштаб <input type="number" class="magnification"
+                                                         oninput="manualPositionSet(this)"></label>
+                            <label>Введите название обложки <input type="text" class="cover"
+                                                                  onchange="showSkin()"></label>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="img/logo_orange_bg.jpg" alt="Логотип компании" class="logo" height="80" width="80">
+            </div>
+            <div class="footer__nav_container">
+                <div class="footer__nav">
+                    <ul class="footer_ul">
+                        <li class="footer__item"><a class="footer__nav_link" href="delivery.html">Доставка и оплата</a>
+                        </li>
+                        <li class="footer__item"><a class="footer__nav_link" href="promotions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav">
+                    <ul class="footer_ul_middle">
+                        <li class="footer__item"><a class="footer__nav_link" href="reviews.html">Отзывы</a></li>
+                        <li class="footer__item"><a class="footer__nav_link" href="policy.html">Политика
+                            конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="footer__contact_info">
+                <p>ИП Орлов Евгений Батькович</p>
+            </div>-->
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<!--<script src="js/js.js"></script>-->
+<script src="js/order_view.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
