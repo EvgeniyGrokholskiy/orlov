@@ -255,6 +255,9 @@ html, body {
   overflow: hidden;
 }
 @media screen and (max-width: 479px) {
+  .wrapper .section_1 .slick-slider {
+    width: 230px;
+  }
   .wrapper .section_1 .slick-list {
     width: 230px;
   }

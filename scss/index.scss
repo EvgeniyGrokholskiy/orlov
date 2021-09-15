@@ -282,6 +282,9 @@ html, body {
     }
 
     @media screen and (max-width: 479px) {
+      .slick-slider{
+        width: 230px;
+      }
       .slick-list {
         width: 230px;
       }

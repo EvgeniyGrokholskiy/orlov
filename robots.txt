@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+User-agent: YandexBot
+Disallow:
+Host: gifttrend.ru
+Sitemap: https://gifttrend.ru/sitemap.xml
