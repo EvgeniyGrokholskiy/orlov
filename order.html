@@ -45,7 +45,8 @@
                     <div class="order_constructor__image">
                         <div class="order_construction__background_image">
                             <div class="tuning_buttons">
-                                <button id="increase" class="increase tuning_buttons__item shadow" onclick="scaling(this.id)">
+                                <button id="increase" class="increase tuning_buttons__item shadow"
+                                        onclick="scaling(this.id)">
                                     <svg class="sign" xmlns="http://www.w3.org/2000/svg" width="15"
                                          height="15" viewBox="0 0 1267.000000 1280.000000"
                                          preserveAspectRatio="xMidYMid meet">
@@ -86,12 +87,18 @@
                             Переходите в мессенджер, подскажем
                         </p>
                         <div class="did_not_work__socials">
-                            <a class="did_not_work_link" href="https://wa.me/+79080405921" target="_blank" referrerpolicy="origin">
-                                <button class="did_not_work__whatsapp shadow shadow-round" tabindex="-1"></button>
-                            </a>
-                            <a class="did_not_work_link" href="https://www.instagram.com/trend_gifts74" target="_blank" referrerpolicy="origin">
-                                <button class="did_not_work__instagram shadow shadow-round" tabindex="-1"></button>
-                            </a>
+
+                            <button class="did_not_work__button did_not_work__whatsapp shadow shadow-round"
+                                    tabindex="-1"><a class="did_not_work_link" href="https://wa.me/+79080405921"
+                                                     target="_blank" referrerpolicy="origin" rel="noopener"></a>
+                            </button>
+
+                            <button class="did_not_work__button did_not_work__instagram shadow shadow-round"
+                                    tabindex="-1"><a class="did_not_work_link"
+                                                     href="https://www.instagram.com/trend_gifts74" target="_blank"
+                                                     referrerpolicy="origin" rel="noopener"></a>
+                            </button>
+
                         </div>
                     </div>
                     <div class="order_preview__price">
@@ -129,12 +136,12 @@
                                    placeholder="Текст">
                         </label>
 
-                       <!-- <label class="label_text label_text-margin" for="live_photo">Оживить фото (QR-код)
-                            <input class="checkbox_to_hide" id="live_photo" name="live_photo" type="checkbox"
-                                   data-price="500">
-                            <span class="checkbox"></span>
-                        </label>-->
-                       <!-- <span class="addition_price">+500 р.</span>-->
+                        <!-- <label class="label_text label_text-margin" for="live_photo">Оживить фото (QR-код)
+                             <input class="checkbox_to_hide" id="live_photo" name="live_photo" type="checkbox"
+                                    data-price="500">
+                             <span class="checkbox"></span>
+                         </label>-->
+                        <!-- <span class="addition_price">+500 р.</span>-->
 
                         <label class="label_text label_text-margin" for="wall">Добавить крепление на стену
                             <span class="addition_price">+100 р.</span>
@@ -185,7 +192,10 @@
                             <label class="form_label" for="email">Электронная почта</label>
                             <input class="form_input" id="email" name="email" type="email"
                                    placeholder="Введите электронную почту" required>
-                            <label for="permission" class="form_label form_label-permission"><input class="permission" id="permission" type="checkbox" required>Даю
+                            <label for="permission" class="form_label form_label-permission"><input class="permission"
+                                                                                                    id="permission"
+                                                                                                    type="checkbox"
+                                                                                                    required>Даю
                                 согласие на обработку персональных данных.</label>
                             <input class="send_button" type="submit" id="send_button" name="send_button"
                                    placeholder="Отправить" value="Отправить">
@@ -200,9 +210,10 @@
 
                     </form>
                     <span class="price_for_mobile"></span>
-                    <a href="" id="link">
-                        <button class="checkout shadow" id="button" type="button">Оформить заказ</button>
-                    </a>
+
+                    <button class="checkout shadow" id="button" type="button"><a class="checkout__link" href=""
+                                                                                 id="link">Оформить заказ</a></button>
+
 
                     <div class="did_not_work did_not_work-for_mobile">
                         <p class="did_not_work__text">

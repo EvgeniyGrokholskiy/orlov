@@ -198,6 +198,13 @@ html, body {
   background-size: contain;
   border: none;
   border-radius: 50%;
+  padding: 0;
+  height: 71px;
+  width: 71px;
+}
+.wrapper .section_1 .section_1__info .did_not_work_link {
+  display: block;
+  text-decoration: none;
   height: 71px;
   width: 71px;
 }
@@ -241,8 +248,7 @@ html, body {
 }
 .wrapper .section_1 .slick-slider {
   position: relative;
-  max-width: 463px;
-  width: 100%;
+  width: 463px;
 }
 .wrapper .section_1 .slick-list {
   padding-bottom: 30px;
@@ -259,15 +265,13 @@ html, body {
 .wrapper .section_1 .slick-slide {
   height: 100%;
   margin: 0 5px;
-  max-width: 223px;
-  width: 100%;
+  width: 223px;
   /*height: auto;
   width: 232px;*/
 }
 .wrapper .section_1 .slick-slide img {
   height: 100%;
-  max-width: 223px;
-  width: 100%;
+  width: 223px;
 }
 .wrapper .section_1 .slider__item {
   position: relative;
@@ -667,14 +671,7 @@ html, body {
     width: 100%;
   }
 }
-.wrapper .continue__link {
-  display: block;
-  text-decoration: none;
-  margin: 0 auto;
-  max-width: 180px;
-  width: 100%;
-}
-.wrapper .continue__link .continue {
+.wrapper .continue {
   font-family: Roboto-Regular, sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -689,6 +686,13 @@ html, body {
   border-radius: 25px;
   height: 50px;
   margin: 0 auto 60px auto;
+  max-width: 180px;
+  width: 100%;
+}
+.wrapper .continue .continue__link {
+  display: block;
+  text-decoration: none;
+  margin: 0 auto;
   max-width: 180px;
   width: 100%;
 }

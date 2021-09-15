@@ -130,17 +130,17 @@ function changeText() {
 function scaling(id) {
     if (id === 'increase') {
         magnificationRatio += 5;
-        uploadedFileMiniature.style.height = magnificationRatio + '%';
+        //uploadedFileMiniature.style.height = magnificationRatio + '%';
         imgInCover.style.height = magnificationRatio + '%';
     } else if (id === 'reduction') {
         magnificationRatio -= 5;
-        uploadedFileMiniature.style.height = magnificationRatio + '%';
+        //uploadedFileMiniature.style.height = magnificationRatio + '%';
         imgInCover.style.height = magnificationRatio + '%';
     }
     document.getElementById('magnification').value = magnificationRatio;
 }
 
-let uploadedFileMiniature = document.getElementById('upload_file_miniature_img');
+//let uploadedFileMiniature = document.getElementById('upload_file_miniature_img');
 let magnificationRatio = 100;
 
 //---------------------------moving image----------------------------------------
@@ -169,8 +169,8 @@ function moveImg(event) {
         positionTop += 5;
     }
 
-    uploadedFileMiniature.style.top = positionTop + 'px';
-    uploadedFileMiniature.style.left = positionLeft + 'px';
+    //uploadedFileMiniature.style.top = positionTop + 'px';
+    //uploadedFileMiniature.style.left = positionLeft + 'px';
     imgInCover.style.top = positionTop + 'px';
     imgInCover.style.left = positionLeft + 'px';
     document.getElementById('pos_y').value = positionTop;
@@ -236,7 +236,7 @@ function prepareToSendForm(e) {
     let sendToEmail = document.querySelector('.form_to_email_container');
     let labelForTrackName = document.getElementById('input_for_track_name');
     let labelForPerformerName = document.getElementById('input_for_performer_name');
-    let button = document.getElementById('link');
+    //let button = document.getElementById('link');
     let price = document.getElementById('price');
     let sizeOfGlass = document.getElementById('size_of_glass');
     let playerCover = document.getElementById('cover');

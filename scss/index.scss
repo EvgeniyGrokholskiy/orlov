@@ -211,6 +211,14 @@ html, body {
         background-size: contain;
         border: none;
         border-radius: 50%;
+        padding: 0;
+        height: 71px;
+        width: 71px;
+      }
+
+      .did_not_work_link {
+        display: block;
+        text-decoration: none;
         height: 71px;
         width: 71px;
       }
@@ -256,8 +264,7 @@ html, body {
     /* Слайдер */
     .slick-slider {
       position: relative;
-      max-width: 463px;
-      width: 100%;
+      width: 463px;
     }
 
     /* Слайдер запущен */
@@ -289,15 +296,14 @@ html, body {
     .slick-slide {
       height: 100%;
       margin: 0 5px;
-      max-width: 223px;
-      width: 100%;
+      width: 223px;
+
       /*height: auto;
       width: 232px;*/
 
       img {
         height: 100%;
-        max-width: 223px;
-        width: 100%;
+        width: 223px;
       }
     }
 
@@ -380,7 +386,7 @@ html, body {
 
     }
 
-    @media screen and (max-width: 479px){
+    @media screen and (max-width: 479px) {
       .slick-arrow {
         width: 6vw;
       }
@@ -392,7 +398,7 @@ html, body {
       }
     }
 
-    @media screen and (max-width: 380px){
+    @media screen and (max-width: 380px) {
       .slick-arrow {
         width: 8vw;
       }
@@ -772,25 +778,27 @@ html, body {
     }
   }
 
-  .continue__link {
+  .continue {
+    @include font(20px);
+    color: $white_text;
+    cursor: pointer;
     display: block;
-    text-decoration: none;
-    margin: 0 auto;
+    background: $light_blue;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    margin: 0 auto 60px auto;
     max-width: 180px;
     width: 100%;
 
-    .continue {
-      @include font(20px);
-      color: $white_text;
-      cursor: pointer;
+
+    .continue__link {
       display: block;
-      background: $light_blue;
-      border: none;
-      border-radius: 25px;
-      height: 50px;
-      margin: 0 auto 60px auto;
+      text-decoration: none;
+      margin: 0 auto;
       max-width: 180px;
       width: 100%;
+
     }
   }
 }

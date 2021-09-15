@@ -76,13 +76,14 @@ html, body {
   background-repeat: no-repeat;
   border: none;
   height: 169px;
+  padding: 0;
+  margin: 0 0 0 55px;
   max-width: 169px;
   width: 100%;
 }
 .wrapper .reviews .reviews__link {
   display: block;
   cursor: pointer;
-  margin: 0 0 0 55px;
   height: 169px;
   width: 169px;
 }

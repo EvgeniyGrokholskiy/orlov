@@ -77,10 +77,12 @@ html, body {
   background-color: white;
   background-repeat: no-repeat;
   border: none;
+  padding: 0;
   height: 50px;
   width: 50px;
 }
 .wrapper .promotions .promotions__link {
+  display: block;
   text-decoration: none;
   height: 50px;
   width: 50px;
