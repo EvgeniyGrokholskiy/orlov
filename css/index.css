@@ -789,6 +789,10 @@ html, body {
   .footer_ul, .footer_ul_middle, .footer__contact_info {
     margin-left: 15px;
   }
+
+  .footer__nav_container {
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 709px) {
   .footer {
