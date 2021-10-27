@@ -612,6 +612,15 @@ html, body {
         }
       }
 
+      .size_select__button.has_top_tag {
+
+        &:hover ~ .size_select-top_tag{
+          transform: scale(1.03);
+          box-shadow: 5px 5px 5px gray;
+          left: -47px;
+        }
+      }
+
       .size_select__small {
 
       }

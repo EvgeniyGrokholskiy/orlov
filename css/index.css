@@ -531,6 +531,11 @@ html, body {
   color: #6A6E7C;
   width: 3.2em;
 }
+.wrapper .size_select .size_select__buttons .size_select__button.has_top_tag:hover ~ .size_select-top_tag {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 5px gray;
+  left: -47px;
+}
 .wrapper .size_select .size_select__buttons .size_select__medium {
   position: relative;
   margin: 10px 0;
