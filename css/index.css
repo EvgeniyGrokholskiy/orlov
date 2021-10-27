@@ -178,7 +178,7 @@ html, body {
   width: 100%;
   height: 50px;
 }
-.wrapper .section_1 .section_1__info .section_1__order_button .section_1__link {
+.wrapper .section_1 .section_1__info .section_1__link {
   font-family: Roboto-Regular, sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -688,15 +688,11 @@ html, body {
   border: none;
   border-radius: 25px;
   height: 50px;
+  line-height: 50px;
   margin: 0 auto 60px auto;
   max-width: 180px;
-  width: 100%;
-}
-.wrapper .continue .continue__link {
-  display: block;
   text-decoration: none;
-  margin: 0 auto;
-  max-width: 180px;
+  text-align: center;
   width: 100%;
 }
 

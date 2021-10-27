@@ -72,7 +72,7 @@
                             <img id="player_theme" class="player_theme" src="img/apple_w_o_text.jpg" alt="Тема плейера"
                                  width="280" height="379">
                             <div class="order_construction__user_img">
-                                <img id="user_image" src="" alt="">
+                                <img id="user_image" src="#" alt="">
                             </div>
                             <div class="order_construction__user_text">
                                 <span id="track_name_span" class="user_text user_text-track">Название трека</span>
@@ -88,16 +88,14 @@
                         </p>
                         <div class="did_not_work__socials">
 
-                            <button class="did_not_work__button did_not_work__whatsapp shadow shadow-round"
-                                    tabindex="-1"><a class="did_not_work_link" href="https://wa.me/+79080405921"
-                                                     target="_blank" referrerpolicy="origin" rel="noopener"></a>
-                            </button>
+                            <a class="did_not_work__button did_not_work__whatsapp shadow shadow-round did_not_work_link"
+                               href="https://wa.me/+79080405921"
+                               target="_blank" referrerpolicy="origin" rel="noopener"></a>
 
-                            <button class="did_not_work__button did_not_work__instagram shadow shadow-round"
-                                    tabindex="-1"><a class="did_not_work_link"
-                                                     href="https://www.instagram.com/trend_gifts74" target="_blank"
-                                                     referrerpolicy="origin" rel="noopener"></a>
-                            </button>
+
+                            <a class="did_not_work__button did_not_work__instagram shadow shadow-round did_not_work_link"
+                               href="https://www.instagram.com/trend_gifts74" target="_blank"
+                               referrerpolicy="origin" rel="noopener"></a>
 
                         </div>
                     </div>
@@ -105,11 +103,11 @@
                         <span class="price__total_tag">Итого:</span>
                         <span><span class="price__js">00000</span> p.</span>
                     </div>
-<!--                    <p class="order_preview__delivery_price">Стоимость доставки рассчитается далее</p>-->
+                    <!--<p class="order_preview__delivery_price">Стоимость доставки рассчитается далее</p>-->
                 </div>
             </aside>
             <section>
-                <div class="order_constructor__main" id="h123">
+                <div class="order_constructor__main" id="order_constructor">
                     <form id="ajax-contact-form" name="order_glass" class="order_constructor__form"
                           enctype="multipart/form-data">
                         <label class="label_text" id="input_for_track_name" for="track_name">Название трека</label>
@@ -122,19 +120,23 @@
                                onchange="readFile(this)">
 
                         <div class="order_constructor__file_miniature">
-                            <img id="upload_file_miniature_img" class="uploaded_file_miniature_img" src="" alt="">
+                            <img id="upload_file_miniature_img" class="uploaded_file_miniature_img" src="#" alt="">
                         </div>
 
-                        <label class="label_text" for="addition_text">Дополнительный текст
+                        <div class="">
+                            <label class="label_text" for="addition_text">Дополнительный текст
                             <input class="checkbox_to_hide" id="addition_text" name="addition_text" type="checkbox"
                                    data-price="100"
                                    onchange="onOffLowerText()">
                             <span class="checkbox"></span>
                             <span class="addition_price">+100 р.</span>
-                            <input disabled class="gray_input gray_input-other_size " id="addition_text_input"
-                                   name="addition_text_input" type="text"
-                                   placeholder="Текст">
-                        </label>
+                            </label>
+                            <label for="addition_text_input">
+                                <input disabled class="gray_input gray_input-other_size " id="addition_text_input"
+                                       name="addition_text_input" type="text"
+                                       placeholder="Текст">
+                            </label>
+                        </div>
 
                         <!-- <label class="label_text label_text-margin" for="live_photo">Оживить фото (QR-код)
                              <input class="checkbox_to_hide" id="live_photo" name="live_photo" type="checkbox"
@@ -148,6 +150,7 @@
                             <input class="checkbox_to_hide" id="wall" name="wall" type="checkbox" data-price="100">
                             <span class="checkbox"></span>
                         </label>
+
                         <label class="label_text label_text-margin" for="gift">Добавить подарочную упаковку
                             <span class="addition_price">+300 р.</span>
                             <input class="checkbox_to_hide" id="gift" name="gift" type="checkbox"
@@ -197,8 +200,8 @@
                                                                                                     type="checkbox"
                                                                                                     required>Даю
                                 согласие на обработку персональных данных.</label>
-                            <input class="send_button" type="submit" id="send_button" name="send_button"
-                                   placeholder="Отправить" value="Отправить">
+                            <input class="send_button shadow" type="submit" id="send_button" name="send_button"
+                                   value="Отправить">
                             <input id="price" name="price" type="text" class="hidden">
                             <input type="text" id="size_of_glass" name="size_of_glass" class="hidden">
                             <input type="text" id="cover" name="cover" class="hidden">
@@ -211,8 +214,7 @@
                     </form>
                     <span class="price_for_mobile"></span>
 
-                    <button class="checkout shadow" id="button" type="button"><a class="checkout__link" href=""
-                                                                                 id="link">Оформить заказ</a></button>
+                    <a class="checkout shadow checkout__link" id="button" href="">Оформить заказ</a>
 
 
                     <div class="did_not_work did_not_work-for_mobile">
@@ -221,16 +223,15 @@
                             Переходите в мессенджер, подскажем.
                         </p>
                         <div class="did_not_work__socials">
-                            <button class="did_not_work__button did_not_work__whatsapp shadow shadow-round"
-                                    tabindex="-1"><a class="did_not_work_link" href="https://wa.me/+79080405921"
-                                                     target="_blank" referrerpolicy="origin" rel="noopener"></a>
-                            </button>
 
-                            <button class="did_not_work__button did_not_work__instagram shadow shadow-round"
-                                    tabindex="-1"><a class="did_not_work_link"
-                                                     href="https://www.instagram.com/trend_gifts74" target="_blank"
-                                                     referrerpolicy="origin" rel="noopener"></a>
-                            </button>
+                            <a class="did_not_work__button did_not_work__whatsapp shadow shadow-round did_not_work_link"
+                               href="https://wa.me/+79080405921"
+                               target="_blank" referrerpolicy="origin" rel="noopener"></a>
+
+                            <a class="did_not_work__button did_not_work__instagram shadow shadow-round did_not_work_link"
+                               href="https://www.instagram.com/trend_gifts74" target="_blank"
+                               referrerpolicy="origin" rel="noopener"></a>
+
                         </div>
                     </div>
                 </div>

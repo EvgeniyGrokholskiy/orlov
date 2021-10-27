@@ -265,8 +265,8 @@ function prepareToSendForm(e) {
         labelForTrackName.classList.add('error');
         labelForTrackName.textContent = 'Ведите название трека';
 
-        //button.setAttribute('href', '#h123');
-        scrollToAnchor('#h123');
+        //button.setAttribute('href', '#horder_constructor');
+        scrollToAnchor('#order_constructor');
 
     } else if (userPerformerNameInput.value === '') {
 
@@ -277,9 +277,9 @@ function prepareToSendForm(e) {
         labelForPerformerName.classList.add('error');
         labelForPerformerName.textContent = 'Укажите имя исполнителя';
 
-        //button.setAttribute('href', '#h123');
+        //button.setAttribute('href', '#order_constructor');
 
-        scrollToAnchor('#h123');
+        scrollToAnchor('#order_constructor');
     }
 
     function scrollToAnchor(href) {

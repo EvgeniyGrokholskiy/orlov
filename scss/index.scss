@@ -193,15 +193,15 @@ html, body {
         text-align: center;
         width: 100%;
         height: 50px;
+      }
 
-        .section_1__link {
-          @include font(20px, 50px);
-          display: block;
-          color: $white_text;
-          text-decoration: none;
-          max-width: 123px;
-          width: 100%;
-        }
+      .section_1__link {
+        @include font(20px, 50px);
+        display: block;
+        color: $white_text;
+        text-decoration: none;
+        max-width: 123px;
+        width: 100%;
       }
 
       .did_not_work__instagram {
@@ -282,7 +282,7 @@ html, body {
     }
 
     @media screen and (max-width: 479px) {
-      .slick-slider{
+      .slick-slider {
         width: 230px;
       }
       .slick-list {
@@ -790,19 +790,12 @@ html, body {
     border: none;
     border-radius: 25px;
     height: 50px;
+    line-height: 50px;
     margin: 0 auto 60px auto;
     max-width: 180px;
+    text-decoration: none;
+    text-align: center;
     width: 100%;
-
-
-    .continue__link {
-      display: block;
-      text-decoration: none;
-      margin: 0 auto;
-      max-width: 180px;
-      width: 100%;
-
-    }
   }
 }
 
