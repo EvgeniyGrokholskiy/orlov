@@ -534,6 +534,7 @@ html, body {
 .wrapper .size_select .size_select__buttons .size_select__button.has_top_tag:hover ~ .size_select-top_tag {
   transform: scale(1.03);
   box-shadow: 5px 5px 5px gray;
+  border-radius: 10px;
   left: -47px;
 }
 .wrapper .size_select .size_select__buttons .size_select__medium {

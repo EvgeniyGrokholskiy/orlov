@@ -617,6 +617,7 @@ html, body {
         &:hover ~ .size_select-top_tag{
           transform: scale(1.03);
           box-shadow: 5px 5px 5px gray;
+          border-radius: 10px;
           left: -47px;
         }
       }
