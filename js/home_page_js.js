@@ -1,3 +1,6 @@
+sessionStorage.setItem('size','');
+sessionStorage.setItem('cover','');
+
 //-----------------------------slick slider---------------------------------------
 
 $(function () {
@@ -23,31 +26,31 @@ document.querySelector('.section_1__link').addEventListener('click', scrollToOrd
 
 function scrollToOrder(event) {
 
-    let top = document.querySelector(event.currentTarget.dataset.href).offsetTop;
+    const top = document.querySelector(event.currentTarget.dataset.href).offsetTop;
     $('body,html').animate({scrollTop: top}, 1000);
 
 }
 
 //------------------------------------size select-------------------------
-function sizeSelect(button) {
+function sizeSelect(event) {
 
-    let sizeSelectLink = document.getElementById('size_select');
+    const button = event.currentTarget.dataset.number;
+    const sizeSelectLink = document.getElementById('size_select');
+    const sizeButtons = document.querySelectorAll('.size_select__button');
 
-    sizeOfGift = button;
-    sessionStorage.setItem('size', sizeOfGift);
+    sessionStorage.setItem('size', button);
 
-    for (let i = 0; i < sizeButtons.length; i++) {
-        if (sizeOfGift === sizeButtons[i].dataset.number) {
-            sizeButtons[i].classList.add('selected');
+    sizeButtons.forEach((element)=>{
+        if (button === element.dataset.number) {
+            element.classList.add('selected');
             sizeSelectLink.classList.remove('error');
         } else {
-            sizeButtons[i].classList.remove('selected');
+            element.classList.remove('selected');
         }
-    }
+    });
 }
 
-let sizeButtons = document.querySelectorAll('.size_select__button');
-let sizeOfGift = '';
+addEventListenerToElements('.size_select__button',sizeSelect,'click');
 
 // sizeSelect('small');
 
@@ -55,27 +58,26 @@ let sizeOfGift = '';
 
 //--------------------------------select skin of player--------------------
 
-function coverSelect(selectCover) {
+function coverSelect(event) {
+    const selectCover = event.currentTarget.dataset.cover;
+    const coverSelectLink = document.getElementById('cover_select');
+    const coverSample = document.getElementById('cover_img');
+    const coverSelectButtons = document.querySelectorAll('.cover_select__button');
 
-    let coverSelectLink = document.getElementById('cover_select');
-    let coverSample = document.getElementById('cover_img');
+    sessionStorage.setItem('cover', selectCover);
 
-    cover = selectCover;
-    sessionStorage.setItem('cover', cover);
-
-    for (let i = 0; i < coverSelectButtons.length; i++) {
-        if (cover === coverSelectButtons[i].dataset.cover) {
-            coverSample.src = coverSelectButtons[i].dataset.src;
-            coverSelectButtons[i].classList.add('selected');
+    coverSelectButtons.forEach((element)=>{
+        if (selectCover === element.dataset.cover) {
+            coverSample.src = element.dataset.src;
+            element.classList.add('selected');
             coverSelectLink.classList.remove('error');
         } else {
-            coverSelectButtons[i].classList.remove('selected');
+            element.classList.remove('selected');
         }
-    }
+    })
 }
 
-let coverSelectButtons = document.querySelectorAll('.cover_select__button');
-let cover = '';
+addEventListenerToElements('.cover_select__button',coverSelect,'click');
 
 // coverSelect('apple');
 
@@ -83,8 +85,11 @@ let cover = '';
 
 function toNextPage() {
 
-    let sizeSelectLink = document.getElementById('size_select');
-    let coverSelectLink = document.getElementById('cover_select');
+    const sizeOfGift = sessionStorage.getItem('size');
+    const cover = sessionStorage.getItem('cover');
+    const continueButton = document.querySelector('.continue__link');
+    const sizeSelectLink = document.getElementById('size_select');
+    const coverSelectLink = document.getElementById('cover_select');
 
     if (sizeOfGift !== '' && cover !== '') {
         continueButton.setAttribute('href', 'order.html');
@@ -99,10 +104,24 @@ function toNextPage() {
 
 function scrollToAnchor(href) {
 
-    let top = document.querySelector(href).offsetTop;
+    const top = document.querySelector(href).offsetTop;
     $('body,html').animate({scrollTop: top}, 1000);
 
 }
 
-let continueButton = document.querySelector('.continue__link');
-continueButton.addEventListener('click', toNextPage);
+
+addEventListenerToElements('.continue__link',toNextPage,'click');
+
+function addEventListenerToElements (elementsClass,functionName,typeOfListener='click') {
+
+    const elements = document.querySelectorAll(elementsClass);
+
+    if (elements.length > 1) {
+        elements.forEach((element) => {
+            element.addEventListener(typeOfListener, functionName);
+        })
+    }else {
+        document.querySelector(elementsClass).addEventListener('click', functionName);
+    }
+}
+

@@ -523,7 +523,6 @@ html, body {
 
       .banner__size_text {
         font-size: 14px;
-        width: 95%;
       }
 
       .banner__price_text {
@@ -580,7 +579,7 @@ html, body {
         top: 85px;
         left: -40px;
         height: 75px;
-        width: 50px;
+        width: 60px;
         z-index: -1;
       }
 
@@ -590,7 +589,7 @@ html, body {
         cursor: pointer;
         justify-content: space-between;
         background-color: $gray;
-        border-radius: 10px;
+        border-radius: 10px 0 0 10px;
         height: 75px;
         padding: 0 2%;
         max-width: 580px;
@@ -610,15 +609,30 @@ html, body {
           color: $price_color;
           width: 3.2em;
         }
+
+        @media screen and (max-width: 390px) {
+          .size_select__text {
+            font-size: 12px;
+          }
+          .size_select__price {
+            font-size: 14px;
+          }
+        }
       }
 
       .size_select__button.has_top_tag {
 
-        &:hover ~ .size_select-top_tag{
+        &:hover ~ .size_select-top_tag {
           transform: scale(1.03);
           box-shadow: 5px 5px 5px gray;
           border-radius: 10px;
           left: -47px;
+        }
+
+        &:active ~ .size_select-top_tag {
+          box-shadow: 3px 3px 3px gray;
+          transform: scale(0.99);
+          left: -35px;
         }
       }
 

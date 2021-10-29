@@ -439,7 +439,6 @@ html, body {
   }
   .wrapper .banner .banner__size_text {
     font-size: 14px;
-    width: 95%;
   }
   .wrapper .banner .banner__price_text {
     font-size: 14px;
@@ -494,7 +493,7 @@ html, body {
   top: 85px;
   left: -40px;
   height: 75px;
-  width: 50px;
+  width: 60px;
   z-index: -1;
 }
 .wrapper .size_select .size_select__buttons .size_select__button {
@@ -503,7 +502,7 @@ html, body {
   cursor: pointer;
   justify-content: space-between;
   background-color: #EBEBEB;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   height: 75px;
   padding: 0 2%;
   max-width: 580px;
@@ -531,11 +530,24 @@ html, body {
   color: #6A6E7C;
   width: 3.2em;
 }
+@media screen and (max-width: 390px) {
+  .wrapper .size_select .size_select__buttons .size_select__button .size_select__text {
+    font-size: 12px;
+  }
+  .wrapper .size_select .size_select__buttons .size_select__button .size_select__price {
+    font-size: 14px;
+  }
+}
 .wrapper .size_select .size_select__buttons .size_select__button.has_top_tag:hover ~ .size_select-top_tag {
   transform: scale(1.03);
   box-shadow: 5px 5px 5px gray;
   border-radius: 10px;
   left: -47px;
+}
+.wrapper .size_select .size_select__buttons .size_select__button.has_top_tag:active ~ .size_select-top_tag {
+  box-shadow: 3px 3px 3px gray;
+  transform: scale(0.99);
+  left: -35px;
 }
 .wrapper .size_select .size_select__buttons .size_select__medium {
   position: relative;

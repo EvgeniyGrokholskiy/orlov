@@ -13,10 +13,10 @@ let cover = sessionStorage.getItem('cover'); //data from home-page: player skin
 let skinImg = document.getElementById('player_theme');
 
 function showSkin() {
-    let textBlock = document.querySelector('.order_construction__user_text');
-    let trackNameSpan = document.getElementById('track_name_span');
-    let performerSpan = document.getElementById('performer_name_span');
-    let lowerTextSpan = document.getElementById('lower_text_span');
+    const textBlock = document.querySelector('.order_construction__user_text');
+    const trackNameSpan = document.getElementById('track_name_span');
+    const performerSpan = document.getElementById('performer_name_span');
+    const lowerTextSpan = document.getElementById('lower_text_span');
     let prefix;
 
     if (cover === 'apple') {
@@ -66,7 +66,6 @@ function readFile(input) {
     $('body,html').animate({scrollTop: top}, 1500); //Animated movement to target element
 
 
-    //window.location.hash="player_theme";
     //userImgBackground.setAttribute('style',`background-image: url("${uploadFileURL}");`);
 
 }
@@ -189,9 +188,10 @@ function listenerToInputOption() {
 
 function priceChange() {
 
-    let showPrice = document.querySelector('.price__js');
-    let showPriceMobile = document.querySelector('.price_for_mobile');
-    optionPrice = 0
+    const spanForShowPrice = document.querySelector('.price__js');
+    const spanForShowPriceInMobile = document.querySelector('.price_for_mobile');
+    let totalPrice =  0;
+    optionPrice = 0;
 
     if (size === 'small') {
         price = 990;
@@ -214,13 +214,14 @@ function priceChange() {
     for (let i = 0; i < optionPriceArray.length; i++) {
         optionPrice += +optionPriceArray[i];
     }
-    showPrice.textContent = (+price + +optionPrice).toString();//price on page
-    showPriceMobile.textContent = 'Итого: ' + (+price + +optionPrice) + ' р.';
-    priceToEmail = +price + +optionPrice;        //adding price in hiding input in order form
+    totalPrice = +price + +optionPrice;
+    spanForShowPrice.textContent = (totalPrice).toString();//price on page
+    spanForShowPriceInMobile.textContent = 'Итого: ' + (totalPrice) + ' р.';
+    priceToEmail = totalPrice;        //adding price in hiding input in order form
 }
 
 
-let optionInputs = document.querySelectorAll('.checkbox_to_hide');
+const optionInputs = document.querySelectorAll('.checkbox_to_hide');
 let optionPriceArray = [];
 let optionPrice = 0;
 let price = 0;
@@ -231,20 +232,20 @@ listenerToInputOption();
 
 //------------------------------------------------------------------------------------------
 
-function prepareToSendForm(e) {
+function prepareToSendForm(event) {
 
-    let sendToEmail = document.querySelector('.form_to_email_container');
-    let labelForTrackName = document.getElementById('input_for_track_name');
-    let labelForPerformerName = document.getElementById('input_for_performer_name');
+    const sendToEmail = document.querySelector('.form_to_email_container');
+    const labelForTrackName = document.getElementById('input_for_track_name');
+    const labelForPerformerName = document.getElementById('input_for_performer_name');
     //let button = document.getElementById('link');
-    let price = document.getElementById('price');
-    let sizeOfGlass = document.getElementById('size_of_glass');
-    let playerCover = document.getElementById('cover');
+    const price = document.getElementById('price');
+    const sizeOfGlass = document.getElementById('size_of_glass');
+    const playerCover = document.getElementById('cover');
 
 
     if (userTrackNameInput.value !== '' && userPerformerNameInput.value !== '') {
 
-        e.preventDefault()
+        event.preventDefault()
 
         labelForTrackName.classList.remove('error');
         labelForTrackName.innerHTML = 'Название трека';
@@ -260,7 +261,7 @@ function prepareToSendForm(e) {
 
     } else if (userTrackNameInput.value === '') {
 
-        e.preventDefault()
+        event.preventDefault()
 
         labelForTrackName.classList.add('error');
         labelForTrackName.textContent = 'Ведите название трека';
@@ -270,7 +271,7 @@ function prepareToSendForm(e) {
 
     } else if (userPerformerNameInput.value === '') {
 
-        e.preventDefault()
+        event.preventDefault()
 
         labelForTrackName.classList.remove('error');
         labelForTrackName.textContent = 'Название трека';
@@ -292,12 +293,12 @@ function prepareToSendForm(e) {
 
 
 function closeForm() {
-    let sendToEmail = document.querySelector('.form_to_email_container');
+    const sendToEmail = document.querySelector('.form_to_email_container');
     sendToEmail.classList.add('hidden');
 }
 
-let close = document.getElementById('close');
+const close = document.getElementById('close');
 close.addEventListener('click', closeForm);
 
-let formSubmit = document.getElementById('button');
+const formSubmit = document.getElementById('button');
 formSubmit.addEventListener('click', prepareToSendForm);
